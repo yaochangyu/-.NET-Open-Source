@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Input;
 using System.Windows.Interop;
+using System.Windows.Media.Media3D;
 
 namespace Tako.GlobalHotKey
 {
@@ -37,8 +38,9 @@ namespace Tako.GlobalHotKey
             {
                 this.m_HandleSource = new HwndSource(new HwndSourceParameters());
 
-                // this.m_HandleSource.AddHook(HwndSourceHook);
-                this.m_HandleSource.AddHook(messagesHandler);
+                this.m_HandleSource.AddHook(HwndSourceHook);
+
+                //this.m_HandleSource.AddHook(messagesHandler);
             }
             if (this.m_RegisteredList == null)
             {
@@ -122,25 +124,6 @@ namespace Tako.GlobalHotKey
             GC.SuppressFinalize(this);
         }
 
-        private IntPtr messagesHandler(IntPtr handle, int message, IntPtr wParam, IntPtr lParam, ref bool handled)
-        {
-            if (message == WM_HOTKEY)
-            {
-                // Extract key and modifiers from the message.
-                var key = KeyInterop.KeyFromVirtualKey(((int)lParam >> 16) & 0xFFFF);
-                var modifiers = (ModifierKeys)((int)lParam & 0xFFFF);
-
-                var hotKey = new HotKey(modifiers, key);
-
-                //onKeyPressed(new KeyPressedEventArgs(hotKey));
-
-                handled = true;
-                return new IntPtr(1);
-            }
-
-            return IntPtr.Zero;
-        }
-
         protected virtual void Dispose(bool disposing)
         {
             if (this.m_Disposed)
@@ -165,11 +148,15 @@ namespace Tako.GlobalHotKey
 
             if (this.m_HandleSource != null)
             {
-                //this.m_HandleSource.RemoveHook(HwndSourceHook);
-                this.m_HandleSource.RemoveHook(messagesHandler);
-                this.m_HandleSource.Dispose();
+                this.m_HandleSource.RemoveHook(HwndSourceHook);
 
-                this.m_HandleSource = null;
+                //this.m_HandleSource.RemoveHook(messagesHandler);
+                System.Windows.Threading.DispatcherObject obj = new AmbientLight();
+                obj.Dispatcher.Invoke((Action)(() =>
+                {
+                    this.m_HandleSource.Dispose();
+                    this.m_HandleSource = null;
+                }));
             }
 
             //change flag

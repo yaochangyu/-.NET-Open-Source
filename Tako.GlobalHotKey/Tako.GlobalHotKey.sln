@@ -3,20 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tako.GlobalHotKey", "Tako.GlobalHotKey\Tako.GlobalHotKey.csproj", "{E8F37D87-C841-4B8E-85AF-FE65CF5E6D8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tako.GlobalHotKey.Demo", "Tako.GlobalHotKey.Demo\Tako.GlobalHotKey.Demo.csproj", "{EAD59188-FB22-45EE-8111-0C5372E64C1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tako.GlobalHotKey.Demo.WPF", "Tako.GlobalHotKey.Demo.WPF\Tako.GlobalHotKey.Demo.WPF.csproj", "{9997C6F8-100A-471B-BD4E-7F867869BA28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tako.GlobalHotKey.Demo.Winform", "Tako.GlobalHotKey.Demo.Winform\Tako.GlobalHotKey.Demo.Winform.csproj", "{EAD59188-FB22-45EE-8111-0C5372E64C1E}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
+		SccNumberOfProjects = 4
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs15
 		SccLocalPath0 = .
-		SccProjectUniqueName1 = Tako.GlobalHotKey.Demo\\Tako.GlobalHotKey.Demo.csproj
-		SccProjectName1 = Tako.GlobalHotKey.Demo
-		SccLocalPath1 = Tako.GlobalHotKey.Demo
-		SccProjectUniqueName2 = Tako.GlobalHotKey\\Tako.GlobalHotKey.csproj
-		SccProjectName2 = Tako.GlobalHotKey
-		SccLocalPath2 = Tako.GlobalHotKey
+		SccProjectUniqueName1 = Tako.GlobalHotKey\\Tako.GlobalHotKey.csproj
+		SccProjectName1 = Tako.GlobalHotKey
+		SccLocalPath1 = Tako.GlobalHotKey
+		SccProjectUniqueName2 = Tako.GlobalHotKey.Demo.WPF\\Tako.GlobalHotKey.Demo.WPF.csproj
+		SccProjectName2 = Tako.GlobalHotKey.Demo.WPF
+		SccLocalPath2 = Tako.GlobalHotKey.Demo.WPF
+		SccProjectUniqueName3 = Tako.GlobalHotKey.Demo.Winform\\Tako.GlobalHotKey.Demo.Winform.csproj
+		SccProjectName3 = Tako.GlobalHotKey.Demo.Winform
+		SccLocalPath3 = Tako.GlobalHotKey.Demo.Winform
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +32,10 @@ Global
 		{E8F37D87-C841-4B8E-85AF-FE65CF5E6D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8F37D87-C841-4B8E-85AF-FE65CF5E6D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8F37D87-C841-4B8E-85AF-FE65CF5E6D8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9997C6F8-100A-471B-BD4E-7F867869BA28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9997C6F8-100A-471B-BD4E-7F867869BA28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9997C6F8-100A-471B-BD4E-7F867869BA28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9997C6F8-100A-471B-BD4E-7F867869BA28}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EAD59188-FB22-45EE-8111-0C5372E64C1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EAD59188-FB22-45EE-8111-0C5372E64C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAD59188-FB22-45EE-8111-0C5372E64C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU

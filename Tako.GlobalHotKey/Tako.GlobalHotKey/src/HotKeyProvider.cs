@@ -20,8 +20,8 @@ namespace Tako.GlobalHotKey
         private bool m_Disposed = false;
         private int m_RegisterIndex = 0;
 
-        private readonly Dictionary<HotKey, int> m_RegisteredList;
-        private HwndSource m_HandleSource;
+        private readonly Dictionary<HotKey, int> m_RegisteredList = null;
+        private HwndSource m_HandleSource = null;
 
         //win32 api define
         [DllImport("user32.dll", EntryPoint = "RegisterHotKey")]
@@ -33,14 +33,16 @@ namespace Tako.GlobalHotKey
         //constructor
         public HotKeyProvider()
         {
-            if (this.m_RegisteredList == null)
-            {
-                this.m_RegisteredList = new Dictionary<HotKey, int>();
-            }
             if (this.m_HandleSource == null)
             {
                 this.m_HandleSource = new HwndSource(new HwndSourceParameters());
-                this.m_HandleSource.AddHook(HwndSourceHook);
+
+                // this.m_HandleSource.AddHook(HwndSourceHook);
+                this.m_HandleSource.AddHook(messagesHandler);
+            }
+            if (this.m_RegisteredList == null)
+            {
+                this.m_RegisteredList = new Dictionary<HotKey, int>();
             }
         }
 
@@ -89,7 +91,6 @@ namespace Tako.GlobalHotKey
             this.m_RegisterIndex++;
             this.m_RegisteredList.Add(hotKey, this.m_RegisterIndex);
             var virtualCode = KeyInterop.VirtualKeyFromKey(hotKey.Key);
-            hotKey.ToString();
             return s_RegisterHotKey(this.m_HandleSource.Handle, this.m_RegisterIndex, (uint)hotKey.ModifierKeys, (uint)virtualCode);
         }
 
@@ -121,6 +122,25 @@ namespace Tako.GlobalHotKey
             GC.SuppressFinalize(this);
         }
 
+        private IntPtr messagesHandler(IntPtr handle, int message, IntPtr wParam, IntPtr lParam, ref bool handled)
+        {
+            if (message == WM_HOTKEY)
+            {
+                // Extract key and modifiers from the message.
+                var key = KeyInterop.KeyFromVirtualKey(((int)lParam >> 16) & 0xFFFF);
+                var modifiers = (ModifierKeys)((int)lParam & 0xFFFF);
+
+                var hotKey = new HotKey(modifiers, key);
+
+                //onKeyPressed(new KeyPressedEventArgs(hotKey));
+
+                handled = true;
+                return new IntPtr(1);
+            }
+
+            return IntPtr.Zero;
+        }
+
         protected virtual void Dispose(bool disposing)
         {
             if (this.m_Disposed)
@@ -129,6 +149,10 @@ namespace Tako.GlobalHotKey
             if (disposing)
             {
                 //clean management resource
+                if (HotKeyPressed != null)
+                {
+                    HotKeyPressed = null;
+                }
             }
 
             //clean unmanagement resource
@@ -141,7 +165,11 @@ namespace Tako.GlobalHotKey
 
             if (this.m_HandleSource != null)
             {
+                //this.m_HandleSource.RemoveHook(HwndSourceHook);
+                this.m_HandleSource.RemoveHook(messagesHandler);
                 this.m_HandleSource.Dispose();
+
+                this.m_HandleSource = null;
             }
 
             //change flag

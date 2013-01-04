@@ -16,13 +16,14 @@ namespace Tako.GlobalHotKey.Demo
         public Form2()
         {
             InitializeComponent();
+            m_provider = new HotKeyProvider();
+            m_provider.HotKeyPressed += m_provider_HotKeyPressed;
         }
 
-        private HotKeyProvider m_provider = new HotKeyProvider();
+        private HotKeyProvider m_provider = null;
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            m_provider.HotKeyPressed += m_provider_HotKeyPressed;
         }
 
         private void m_provider_HotKeyPressed(object sender, HotKeyPressedEventArgs e)
@@ -39,6 +40,12 @@ namespace Tako.GlobalHotKey.Demo
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            var hotKey1 = new HotKey(System.Windows.Input.ModifierKeys.Control | System.Windows.Input.ModifierKeys.Alt, Key.F5);
+            var hotKey2 = new HotKey(System.Windows.Input.ModifierKeys.Control | System.Windows.Input.ModifierKeys.Alt, Key.F5);
+            if (hotKey1 == hotKey2)
+            {
+                MessageBox.Show("同款啦");
+            }
             MessageBox.Show(m_provider.Register(System.Windows.Input.ModifierKeys.Control | System.Windows.Input.ModifierKeys.Alt, Key.F5).ToString());
         }
 
@@ -66,6 +73,11 @@ namespace Tako.GlobalHotKey.Demo
         private void button5_Click(object sender, EventArgs e)
         {
             MessageBox.Show(m_provider.Register(System.Windows.Input.ModifierKeys.Shift, Key.D4).ToString());
+        }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //m_provider.Dispose();
         }
     }
 }

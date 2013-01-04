@@ -39,8 +39,6 @@ namespace Tako.GlobalHotKey
                 this.m_HandleSource = new HwndSource(new HwndSourceParameters());
 
                 this.m_HandleSource.AddHook(HwndSourceHook);
-
-                //this.m_HandleSource.AddHook(messagesHandler);
             }
             if (this.m_RegisteredList == null)
             {
@@ -150,7 +148,6 @@ namespace Tako.GlobalHotKey
             {
                 this.m_HandleSource.RemoveHook(HwndSourceHook);
 
-                //this.m_HandleSource.RemoveHook(messagesHandler);
                 System.Windows.Threading.DispatcherObject obj = new AmbientLight();
                 obj.Dispatcher.Invoke((Action)(() =>
                 {

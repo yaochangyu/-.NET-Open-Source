@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tako.GlobalHotKey", "Tako.G
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tako.GlobalHotKey.Demo.WPF", "Tako.GlobalHotKey.Demo.WPF\Tako.GlobalHotKey.Demo.WPF.csproj", "{9997C6F8-100A-471B-BD4E-7F867869BA28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tako.GlobalHotKey.Demo.Winform", "Tako.GlobalHotKey.Demo.Winform\Tako.GlobalHotKey.Demo.Winform.csproj", "{EAD59188-FB22-45EE-8111-0C5372E64C1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tako.GlobalHotKey.Demo.Winform", "Tako.GlobalHotKey.Demo.Winform\Tako.GlobalHotKey.Demo.Winform.csproj", "{C5A653DC-1EA8-48C7-9A73-117F5250E14A}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
@@ -36,10 +36,10 @@ Global
 		{9997C6F8-100A-471B-BD4E-7F867869BA28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9997C6F8-100A-471B-BD4E-7F867869BA28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9997C6F8-100A-471B-BD4E-7F867869BA28}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EAD59188-FB22-45EE-8111-0C5372E64C1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EAD59188-FB22-45EE-8111-0C5372E64C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EAD59188-FB22-45EE-8111-0C5372E64C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EAD59188-FB22-45EE-8111-0C5372E64C1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5A653DC-1EA8-48C7-9A73-117F5250E14A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A653DC-1EA8-48C7-9A73-117F5250E14A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A653DC-1EA8-48C7-9A73-117F5250E14A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A653DC-1EA8-48C7-9A73-117F5250E14A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

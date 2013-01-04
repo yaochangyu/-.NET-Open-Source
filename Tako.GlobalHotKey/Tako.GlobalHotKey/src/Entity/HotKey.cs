@@ -31,6 +31,18 @@ namespace Tako.GlobalHotKey
             this.ModifierKeys = modifiers;
         }
 
+        //public HotKey(Keys modifiers, Keys key)
+        //{
+        //    ModifierKeys ModifierKeysResult;
+        //    if (!ModifierKeys.TryParse(modifiers.ToString(), out ModifierKeysResult))
+        //    {
+        //        throw new NotSupportedException("modifiers");
+        //    }
+
+        //    this.ModifierKeys = ModifierKeysResult;
+        //    this.Key = KeyInterop.KeyFromVirtualKey((int)key);
+        //}
+
         public override bool Equals(object obj)
         {
             var targetArray = getObjectByte(this);

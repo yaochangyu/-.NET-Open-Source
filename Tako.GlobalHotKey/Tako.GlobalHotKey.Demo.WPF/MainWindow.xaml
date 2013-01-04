@@ -4,6 +4,7 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Button Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,10,0,0" Click="Button_Register_Click" />
-        <Button Content="Unregister" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,35,0,0" Click="Button_Unegister_Click" />
+        <Button Content="Unregister" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,66,0,0" Click="Button_Unegister_Click" />
+        <Label Content="Ctrl+Alt+F5 , Ctrl+Alt+F4" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" />
     </Grid>
 </Window>

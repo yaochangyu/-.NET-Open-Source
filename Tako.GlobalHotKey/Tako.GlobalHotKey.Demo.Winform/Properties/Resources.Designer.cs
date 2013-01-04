@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tako.GlobalHotKey.Demo.WPF.Properties {
+namespace Tako.GlobalHotKey.Demo.Winform.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Tako.GlobalHotKey.Demo.WPF.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Tako.GlobalHotKey.Demo.WPF.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Tako.GlobalHotKey.Demo.Winform.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

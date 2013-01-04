@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tako.GlobalHotKey.Demo.WPF.Properties {
+namespace Tako.GlobalHotKey.Demo.Winform.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

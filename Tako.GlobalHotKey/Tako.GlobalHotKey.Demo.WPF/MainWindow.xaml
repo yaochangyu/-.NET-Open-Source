@@ -1,0 +1,9 @@
+﻿<Window x:Class="Tako.GlobalHotKey.Demo.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,10,0,0" Click="Button_Register_Click" />
+        <Button Content="Unregister" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,35,0,0" Click="Button_Unegister_Click" />
+    </Grid>
+</Window>

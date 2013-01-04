@@ -101,7 +101,6 @@ namespace Tako.GlobalHotKey
             var modifierKey = ModifierKeys.ToString().Replace(" ", "");
             if (modifierKey.IndexOf(",") > 0)
             {
-                StringBuilder builder = new StringBuilder();
                 var split = modifierKey.Split(',');
                 if (split != null && split.Length > 0)
                 {

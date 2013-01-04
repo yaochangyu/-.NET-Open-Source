@@ -46,11 +46,6 @@ namespace Tako.GlobalHotKey
             }
         }
 
-        public IEnumerable<HotKey> GetRegisteredHotKey()
-        {
-            return m_RegisteredList.Select(hotkey => hotkey.Key).ToList();
-        }
-
         protected virtual IntPtr HwndSourceHook(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
             if (msg == WM_HOTKEY)
@@ -117,6 +112,11 @@ namespace Tako.GlobalHotKey
             return s_UnregisterHotKey(this.m_HandleSource.Handle, id);
         }
 
+        public IEnumerable<HotKey> GetRegisteredHotKey()
+        {
+            return m_RegisteredList.Select(hotkey => hotkey.Key).ToList();
+        }
+
         public void Dispose()
         {
             this.Dispose(true);
@@ -131,16 +131,19 @@ namespace Tako.GlobalHotKey
             if (disposing)
             {
                 //clean management resource
-                if (this.m_HandleSource != null)
-                {
-                    this.m_HandleSource.Dispose();
-                }
             }
 
             //clean unmanagement resource
+
+            //UnregisterHotKey
             foreach (var register in m_RegisteredList)
             {
                 s_UnregisterHotKey(this.m_HandleSource.Handle, register.Value);
+            }
+
+            if (this.m_HandleSource != null)
+            {
+                this.m_HandleSource.Dispose();
             }
 
             //change flag

@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using System.Windows.Input;
-using MessageBox = System.Windows.MessageBox;
 
 namespace Tako.GlobalHotKey.Demo.WPF
 {

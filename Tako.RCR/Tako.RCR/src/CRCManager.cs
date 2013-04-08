@@ -13,7 +13,7 @@ namespace Tako.CRC
         private EnumOriginalDataFormat _dataFormat = EnumOriginalDataFormat.ASCII;
 
         //property
-        public AbsCRCProvider Provider { get; set; }
+        private AbsCRCProvider Provider { get; set; }
 
         public EnumOriginalDataFormat DataFormat
         {

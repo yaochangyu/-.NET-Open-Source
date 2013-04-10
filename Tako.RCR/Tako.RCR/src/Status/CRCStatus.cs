@@ -6,6 +6,7 @@ using System.Text;
 
 namespace Tako.CRC
 {
+    [Serializable]
     public class CRCStatus : INotifyPropertyChanged
     {
         private string _checkSum;
@@ -28,7 +29,7 @@ namespace Tako.CRC
         public string CheckSum
         {
             get { return _checkSum; }
-            set
+            internal set
             {
                 _checkSum = value;
                 OnPropertyChanged("CheckSum");
@@ -38,7 +39,7 @@ namespace Tako.CRC
         public uint CheckSumValue
         {
             get { return _checkSumValue; }
-            set
+            internal set
             {
                 _checkSumValue = value;
                 OnPropertyChanged("CheckSumValue");
@@ -48,7 +49,7 @@ namespace Tako.CRC
         public byte[] CheckSumArray
         {
             get { return _checkSumArray; }
-            set
+            internal set
             {
                 _checkSumArray = value;
                 OnPropertyChanged("CheckSumArray");
@@ -58,7 +59,7 @@ namespace Tako.CRC
         public byte[] FullDataArray
         {
             get { return _fullDataArray; }
-            set
+            internal set
             {
                 _fullDataArray = value;
                 OnPropertyChanged("FullDataArray");
@@ -68,7 +69,7 @@ namespace Tako.CRC
         public string FullData
         {
             get { return _fullData; }
-            set
+            internal set
             {
                 _fullData = value;
                 OnPropertyChanged("FullData");

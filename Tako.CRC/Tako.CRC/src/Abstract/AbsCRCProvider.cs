@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Tako.CRC;
 
 namespace Tako.CRC
 {
     public abstract class AbsCRCProvider
     {
+        internal string[] _symbol = new string[] { " ", ",", "-", "|" };
+
         protected abstract uint[] CRCTable { get; }
 
         protected abstract uint Polynomial { get; set; }
@@ -25,12 +26,12 @@ namespace Tako.CRC
             switch (DataFormat)
             {
                 case EnumOriginalDataFormat.ASCII:
-                    string filter = CRCGlobalParams.s_Symbol.Aggregate(OriginalData, (current, symbol) => current.Replace(symbol, ""));
+                    string filter = _symbol.Aggregate(OriginalData, (current, symbol) => current.Replace(symbol, ""));
                     dataArray = Encoding.ASCII.GetBytes(filter);
                     break;
 
                 case EnumOriginalDataFormat.HEX:
-                    dataArray = CRCGlobalParams.HexStringToBytes(OriginalData);
+                    dataArray = HexStringToBytes(OriginalData);
                     break;
             }
             CRCStatus status = this.GetCRC(dataArray);
@@ -87,11 +88,39 @@ namespace Tako.CRC
                     break;
 
                 case EnumOriginalDataFormat.HEX:
-                    status.FullData = CRCGlobalParams.BytesToHexString(OriginalArray) + status.CheckSum;
+                    status.FullData = BytesToHexString(OriginalArray) + status.CheckSum;
                     break;
             }
 
             //return status;
+        }
+
+        public virtual byte[] HexStringToBytes(string Hex)
+        {
+            if (string.IsNullOrEmpty(Hex))
+            {
+                throw new ArgumentNullException("Hex");
+            }
+            string filter = _symbol.Aggregate(Hex, (current, symbol) => current.Replace(symbol, ""));
+
+            return Enumerable.Range(0, filter.Length)
+                              .Where(x => x % 2 == 0)
+                              .Select(x => Convert.ToByte(filter.Substring(x, 2), 16))
+                              .ToArray();
+
+            //ulong number = ulong.Parse(filter, System.Globalization.NumberStyles.AllowHexSpecifier);
+            //return BitConverter.GetBytes(number);
+        }
+
+        public virtual string BytesToHexString(byte[] HexArray)
+        {
+            if (HexArray == null || HexArray.Length <= 0)
+            {
+                throw new ArgumentNullException("HexArray");
+            }
+
+            var result = BitConverter.ToString(HexArray).Replace("-", "");
+            return result;
         }
     }
 }

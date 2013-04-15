@@ -46,7 +46,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Abstract\AbsCRCProvider.cs" />
-    <Compile Include="src\CRCGlobalParams.cs" />
     <Compile Include="src\CRCManager.cs" />
     <Compile Include="src\CRCProvider\CRC16.cs" />
     <Compile Include="src\CRCProvider\CRC16CCITT.cs" />

@@ -73,6 +73,7 @@ namespace Tako.CRC
                     break;
             }
             this.Provider.DataFormat = this.DataFormat;
+
             return this.Provider;
         }
     }

@@ -9,11 +9,11 @@ namespace Tako.CRC
     [Serializable]
     public class CRCStatus : INotifyPropertyChanged
     {
-        private string _checkSum;
-        private uint _checkSumValue;
-        private byte[] _checkSumArray;
         private byte[] _fullDataArray;
-        private string _fullData;
+        private uint _crcDecimal;
+        private string _crcHexadecimal;
+        private byte[] _crcArray;
+        private string _fullDataHexadecimal;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -26,33 +26,33 @@ namespace Tako.CRC
             }
         }
 
-        public string CheckSum
+        public string CrcHexadecimal
         {
-            get { return _checkSum; }
-            internal set
+            get { return _crcHexadecimal; }
+            set
             {
-                _checkSum = value;
-                OnPropertyChanged("CheckSum");
+                _crcHexadecimal = value;
+                OnPropertyChanged("CrcHexadecimal");
             }
         }
 
-        public uint CheckSumValue
+        public uint CrcDecimal
         {
-            get { return _checkSumValue; }
-            internal set
+            get { return _crcDecimal; }
+            set
             {
-                _checkSumValue = value;
-                OnPropertyChanged("CheckSumValue");
+                _crcDecimal = value;
+                OnPropertyChanged("CrcDecimal");
             }
         }
 
-        public byte[] CheckSumArray
+        public byte[] CrcArray
         {
-            get { return _checkSumArray; }
-            internal set
+            get { return _crcArray; }
+            set
             {
-                _checkSumArray = value;
-                OnPropertyChanged("CheckSumArray");
+                _crcArray = value;
+                OnPropertyChanged("CrcArray");
             }
         }
 
@@ -66,13 +66,13 @@ namespace Tako.CRC
             }
         }
 
-        public string FullData
+        public string FullDataHexadecimal
         {
-            get { return _fullData; }
-            internal set
+            get { return _fullDataHexadecimal; }
+            set
             {
-                _fullData = value;
-                OnPropertyChanged("FullData");
+                _fullDataHexadecimal = value;
+                OnPropertyChanged("Hexadecimal");
             }
         }
     }

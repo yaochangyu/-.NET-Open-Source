@@ -54,20 +54,20 @@ namespace Tako.CRC
             //C5 is hi byte
             //7A is low byte
 
-            status.CheckSumValue = CRC;
+            status.CrcDecimal = CRC;
             var crcHex = CRC.ToString("X");
 
             if (crcHex.Length > 2 && crcHex.Length < 4)
             {
-                status.CheckSum = crcHex.PadLeft(4, '0');
+                status.CrcHexadecimal = crcHex.PadLeft(4, '0');
             }
             else if (crcHex.Length > 4 && crcHex.Length < 8)
             {
-                status.CheckSum = crcHex.PadLeft(8, '0');
+                status.CrcHexadecimal = crcHex.PadLeft(8, '0');
             }
             else
             {
-                status.CheckSum = crcHex;
+                status.CrcHexadecimal = crcHex;
             }
             byte[] fullData = new byte[OriginalArray.Length + CrcArray.Length];
             Array.Copy(OriginalArray, fullData, OriginalArray.Length);
@@ -75,7 +75,7 @@ namespace Tako.CRC
             Array.Copy(CrcArray, reverseCrcArray, CrcArray.Length);
 
             Array.Reverse(reverseCrcArray);
-            status.CheckSumArray = reverseCrcArray;
+            status.CrcArray = reverseCrcArray;
 
             Array.Copy(reverseCrcArray, reverseCrcArray.GetLowerBound(0), fullData, OriginalArray.GetUpperBound(0) + 1, reverseCrcArray.Length);
 
@@ -84,11 +84,11 @@ namespace Tako.CRC
             switch (DataFormat)
             {
                 case EnumOriginalDataFormat.ASCII:
-                    status.FullData = Encoding.ASCII.GetString(OriginalArray) + status.CheckSum;
+                    status.FullDataHexadecimal = Encoding.ASCII.GetString(OriginalArray) + status.CrcHexadecimal;
                     break;
 
                 case EnumOriginalDataFormat.HEX:
-                    status.FullData = BytesToHexString(OriginalArray) + status.CheckSum;
+                    status.FullDataHexadecimal = BytesToHexString(OriginalArray) + status.CrcHexadecimal;
                     break;
             }
 

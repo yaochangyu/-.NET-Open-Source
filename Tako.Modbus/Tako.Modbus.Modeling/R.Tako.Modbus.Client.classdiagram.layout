@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 26.375, 8.5" name="UMLClassDiagram1">
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 24.5, 8.5" name="UMLClassDiagram1">
   <logicalClassDesignerModelMoniker Id="033c1c31-aba8-43ee-a7a1-f58e245a0edc" />
   <nestedChildShapes>
     <classShape Id="e3cae76d-2efd-4c52-aa4c-dc7e635a3c8f" isExpanded="false" absoluteBounds="10.625, 1.75, 1.5, 0.50533563931783043" hideQualifiedName="true" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
@@ -151,36 +151,36 @@
         <classShapeMoniker Id="824770b7-7d2b-4ba6-9cc9-52734218c34d" />
       </nodes>
     </generalizationConnector>
-    <enumerationShape Id="3fc757c2-3b9a-4b07-9c1b-c038c65660fa" absoluteBounds="19.75, 2.125, 1.5, 1.3596440616250041" hideQualifiedName="true" increaseHeight="0.18800345897674564" customColor="161, 150, 103">
+    <enumerationShape Id="3fc757c2-3b9a-4b07-9c1b-c038c65660fa" isExpanded="false" absoluteBounds="19.5, 2.125, 1.5, 0.56800345897674565" hideQualifiedName="true" increaseHeight="0.18800345897674564" customColor="161, 150, 103">
       <enumerationMoniker Id="70d47503-79c8-4c3d-92d8-7d3d03ed2e98" LastKnownName="EnumModbusFraming" />
       <nestedChildShapes>
-        <LiteralElementListCompartment Id="cdb2df5a-72ed-43ee-9c26-f8578b8088f2" absoluteBounds="19.765, 2.7030034589767458, 1.4700000000000002, 0.68164060264825832" name="LiteralsCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <LiteralElementListCompartment Id="cdb2df5a-72ed-43ee-9c26-f8578b8088f2" absoluteBounds="19.515, 2.7030034589767458, 1.4700000000000002, 0.68164060264825832" name="LiteralsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </enumerationShape>
-    <enumerationShape Id="54ec1a06-7ebb-4967-9ab6-8b934bf103bc" absoluteBounds="19.875, 4.875, 1.5, 2.4807377768556278" hideQualifiedName="true" increaseHeight="0.18800345897674564" customColor="161, 150, 103">
+    <enumerationShape Id="54ec1a06-7ebb-4967-9ab6-8b934bf103bc" isExpanded="false" absoluteBounds="17.875, 2.125, 1.5, 0.56800345897674565" hideQualifiedName="true" increaseHeight="0.18800345897674564" customColor="161, 150, 103">
       <enumerationMoniker Id="a5f3ae8a-1eb7-4c40-9f36-ea84a065b92e" LastKnownName="EnumModbusFunctionCode" />
       <nestedChildShapes>
-        <LiteralElementListCompartment Id="cb028177-3c1d-4da9-9ff4-ecc7b550e247" absoluteBounds="19.89, 5.4530034589767453, 1.4700000000000002, 1.8027343178788819" name="LiteralsCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <LiteralElementListCompartment Id="cb028177-3c1d-4da9-9ff4-ecc7b550e247" absoluteBounds="17.89, 2.7030034589767453, 1.4700000000000002, 1.8027343178788819" name="LiteralsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </enumerationShape>
-    <enumerationShape Id="0b718d80-7589-470e-877d-d5340bcfdf6a" absoluteBounds="21.375, 2.125, 1.5, 1.5198003066579497" hideQualifiedName="true" increaseHeight="0.18800345897674564" customColor="161, 150, 103">
+    <enumerationShape Id="0b718d80-7589-470e-877d-d5340bcfdf6a" isExpanded="false" absoluteBounds="21.125, 2.125, 1.5, 0.56800345897674565" hideQualifiedName="true" increaseHeight="0.18800345897674564" customColor="161, 150, 103">
       <enumerationMoniker Id="81a2ecb5-3132-4614-834c-3c2f807cc268" LastKnownName="EnumModbusIntegralUnit" />
       <nestedChildShapes>
-        <LiteralElementListCompartment Id="8093a70c-46dd-4975-bba2-d0539d5b0335" absoluteBounds="21.39, 2.7030034589767458, 1.4700000000000002, 0.84179684768120444" name="LiteralsCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <LiteralElementListCompartment Id="8093a70c-46dd-4975-bba2-d0539d5b0335" absoluteBounds="21.14, 2.7030034589767458, 1.4700000000000002, 0.84179684768120444" name="LiteralsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </enumerationShape>
-    <classShape Id="9c339210-2666-45b6-b2ee-1afb0f6078b5" isExpanded="false" absoluteBounds="19.625, 0.75, 1.5, 0.50533563931783043" hideQualifiedName="true" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+    <classShape Id="9c339210-2666-45b6-b2ee-1afb0f6078b5" isExpanded="false" absoluteBounds="17.875, 1.5, 1.5, 0.50533563931783043" hideQualifiedName="true" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
       <classMoniker Id="f58ad12e-5422-4eed-93f2-b35a826d61ac" LastKnownName="ModbusException" />
       <nestedChildShapes>
-        <AttributeElementListCompartment Id="a04b8080-18be-4570-a4bc-679dd51281a5" absoluteBounds="19.64, 1.265335639317831, 1.4700000000000002, 0.84179684768120444" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
-        <OperationElementListCompartment Id="bdef3a79-5bf2-429f-82b2-84fcce47abc8" absoluteBounds="19.64, 2.1171324869990347, 1.4700000000000002, 1.0019530927141507" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <AttributeElementListCompartment Id="a04b8080-18be-4570-a4bc-679dd51281a5" absoluteBounds="17.89, 2.015335639317831, 1.4700000000000002, 0.84179684768120444" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="bdef3a79-5bf2-429f-82b2-84fcce47abc8" absoluteBounds="17.89, 2.8671324869990347, 1.4700000000000002, 1.0019530927141507" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="76c652dc-2c5c-4861-8763-452c941b4e1c" absoluteBounds="24.625, 2.125, 1.5, 2.7893980697790788" hideQualifiedName="true" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+    <classShape Id="76c652dc-2c5c-4861-8763-452c941b4e1c" isExpanded="false" absoluteBounds="22.75, 2.125, 1.5, 0.50533563931783043" hideQualifiedName="true" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
       <classMoniker Id="810c10c8-12e0-402e-b752-2c984ae3caf3" LastKnownName="ModbusUtility" />
       <nestedChildShapes>
-        <AttributeElementListCompartment Id="ffe83b9e-62f0-42d6-a8aa-b557622f796a" absoluteBounds="24.64, 2.64033563931783, 1.4700000000000002, 1.0019530927141505" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
-        <OperationElementListCompartment Id="9c13254a-ee1a-43d1-97b7-e982961c1c2b" absoluteBounds="24.64, 3.6522887320319812, 1.4700000000000002, 1.1621093377470972" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <AttributeElementListCompartment Id="ffe83b9e-62f0-42d6-a8aa-b557622f796a" absoluteBounds="22.765, 2.64033563931783, 1.4700000000000002, 1.0019530927141505" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="9c13254a-ee1a-43d1-97b7-e982961c1c2b" absoluteBounds="22.765, 3.6522887320319812, 1.4700000000000002, 1.1621093377470972" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="a24c4811-8887-438c-8578-3079920abe1d" isExpanded="false" absoluteBounds="8.375, 0.75, 1.5, 0.50533563931783043" hideQualifiedName="true" increaseHeight="0.18800345897674561" customColor="181, 193, 223">

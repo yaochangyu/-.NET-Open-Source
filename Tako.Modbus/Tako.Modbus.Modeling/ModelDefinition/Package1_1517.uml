@@ -1,0 +1,2275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="533e4f7d-4436-4151-ad66-e49adb8cf58a"
+  name="Modbus"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="39f14caa-180c-4e1b-a84c-cc0cc6baaf8d"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DTako.Modbus"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="bd1839e3-405d-4b67-872a-58668ece2398"
+        LastKnownName="Client"
+        LastKnownLocation="Package2_1517.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="cb6c4a0c-53d3-4968-a4c2-9cfcfacab7af"
+        name="EnumModbusIntegralUnit"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="8445cdcf-e291-4600-812e-d2081f7f3dc8"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusIntegralUnit"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c91dffe5-00ca-4baa-826b-3ea28b43dda4"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="040c33bb-08dd-4aef-9f20-400c5abe80ed">
+                <propertyInstance
+                  Id="0274b93a-a783-441f-9212-68d87b3be26a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b5f93953-b39d-43b8-ad86-162ae1af913a">
+                <propertyInstance
+                  Id="ac44e9ec-ec94-4276-b42d-2ada374541a8"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e7731d89-50b3-4520-933f-22da1ac62cb0">
+                <propertyInstance
+                  Id="b19cfbb2-0c98-4618-ba76-7451c1d81d47"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="aa956251-6f4e-44c6-b3f2-9a1299bb798e"
+            name="Byte">
+            <referencesInternal>
+              <reference
+                Id="15a1c9a1-1db5-4783-a978-56534f39d819"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusIntegralUnit Member%3DByte"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="08bb3974-b0f3-4c00-be40-040b45244a4f"
+            name="DWord">
+            <referencesInternal>
+              <reference
+                Id="1165c960-7b6a-4435-b181-629da4cfffbd"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusIntegralUnit Member%3DDWord"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="abeae42a-8cdc-483f-8ea6-7684abb162c3"
+            name="QWord">
+            <referencesInternal>
+              <reference
+                Id="1f4feb9d-7884-44c5-bca5-4f17fb3eba93"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusIntegralUnit Member%3DQWord"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="82378f57-2abb-464d-87e5-9e28e57a30fc"
+            name="Word">
+            <referencesInternal>
+              <reference
+                Id="fa753aa2-655d-41ea-a5c2-824fd9ed28f5"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusIntegralUnit Member%3DWord"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="452cd51e-bdbf-433f-a792-db1e00f8374a"
+        name="ModbusUtility"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="638f3822-f4f8-4626-804a-fca39cde6582"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusUtility"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="ab86b2ce-4b13-4293-87c7-3808c3cb86b7"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b2618881-b9d4-4a26-9ba3-cbf80851781a">
+                <propertyInstance
+                  Id="ab7e1eca-6a1f-4f6f-907b-812e7b2a36c1"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="630e9e40-53ec-4667-862e-ac6318a54d2e">
+                <propertyInstance
+                  Id="5cb2bce7-0067-4b81-852d-19f82b5bb381"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e36b954f-dde7-43d1-b793-70c693ed4bd2">
+                <propertyInstance
+                  Id="9352c705-4bb0-4208-b583-5db319fe6642"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f172732b-06e2-4fd8-808d-28874192b87a">
+                <propertyInstance
+                  Id="d585f9b3-56ec-4a71-af4b-666bd131916a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f0a5019c-2149-4c62-abb6-119c76c37343">
+                <propertyInstance
+                  Id="20088012-843a-4f59-b625-c7b1a35f9797"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="2827e8fd-baf8-4ca3-9f03-16d2f4cf9077"
+            name="ASCII_END_SYMBOL"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="106b359f-ce98-4834-b9e0-112c738ac395"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusUtility Member%3DASCII_END_SYMBOL"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b9fc9ff1-75f1-4eb7-b905-4c4175bc0e77"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="595c2266-1600-4415-abeb-fc4672befe60">
+                    <propertyInstance
+                      Id="e5ee6d3e-29c3-4b8d-a4bd-805900aa6290"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12b70583-026a-460e-96fe-1e4870303f8c">
+                    <propertyInstance
+                      Id="82c0cfde-f898-4552-86c1-641105ed4943"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="65ded3aa-7942-442a-9a56-9d872d5b56cd">
+                    <propertyInstance
+                      Id="c8de76f3-ba28-440f-a54f-e23d7d6951ca"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d699153-0943-4b21-a8f3-4b62a5eb7d44">
+                    <propertyInstance
+                      Id="99759e56-96de-4b69-8789-9746ff4da65c"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f83e2e67-5f24-43d9-a5df-ae4321efff02">
+                    <propertyInstance
+                      Id="c4e2b249-7a6c-49c9-aa4d-330eec4d70f2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Tako.Modbus.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="be679cf5-a7eb-40a0-8886-b2bf36efdeff"
+            name="ASCII_START_SYMBOL"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="23aa84cb-aa6a-41ba-9f14-83f95fb2d4ae"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusUtility Member%3DASCII_START_SYMBOL"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e9fe20d3-1c0b-45a1-abd3-81e5479fdbb9"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ddf34be8-90ca-49a7-8fb7-b60e23518f39">
+                    <propertyInstance
+                      Id="3a56a225-bb87-4ce6-a83a-7bdd2fc43a96"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9ca124e9-de6f-4781-9719-1cb64e007026">
+                    <propertyInstance
+                      Id="399dd9ca-5c6e-4716-9dd4-cbcddb0fb3f1"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba5fb2ca-b6a8-4ac7-9faa-f1d5b5339811">
+                    <propertyInstance
+                      Id="999dbc8a-7097-4064-9d13-6ad14e991dad"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3d0fd15-acc8-4017-b0af-b1eec1d91527">
+                    <propertyInstance
+                      Id="f17cc9ea-ff43-4923-bf9e-5e9714d001c5"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b08bd600-013b-4030-96c9-38eb8e7b4cae">
+                    <propertyInstance
+                      Id="f78e171b-be82-42c2-a4ed-4198705e36c3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Tako.Modbus.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="462f8076-9b44-4e36-967b-7ca47d03b876"
+            name="s_CrcManager"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0e084d81-efee-45cc-af8f-8cf1657fafc5"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusUtility Member%3Ds_CrcManager"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1e247f69-f8ff-461d-aaad-4d8d4ce3208c"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e69e339-024d-413c-a626-c78702622718">
+                    <propertyInstance
+                      Id="6a532e75-9792-497c-8922-81c9df67a336"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0795b898-9aba-4059-9375-2ddb5a9674e6">
+                    <propertyInstance
+                      Id="c5dcac07-d4dc-41e4-9cf8-6ca79c273c8b"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5097edfe-6d9f-43ba-bcca-e10e090d753f">
+                    <propertyInstance
+                      Id="a9974036-9d5b-4930-9bf8-2540b289d708"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5672c6af-1e92-469f-b3d9-c9e77faf3edd">
+                    <propertyInstance
+                      Id="a0e9f722-905f-4552-977c-da0a3ff6851b"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b912024-9607-4da3-aea9-23b76cad7f25">
+                    <propertyInstance
+                      Id="c01c2ba9-bacd-46d4-b19d-abfe89afcaee"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="cc4ffa5f-5e60-4a5a-a2ce-c19fec76804f"
+                LastKnownName="CRCManager"
+                LastKnownLocation="Package2_1744.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="71041f37-b7a9-4f47-b5be-a54efa38d5dc"
+            name="s_CrcProvider"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="cd963861-9ad4-4784-8157-3f4d274075ef"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusUtility Member%3Ds_CrcProvider"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f4575f29-ba1f-4552-839c-6fe02e7f9d1a"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="38b8c9be-963d-476e-af53-0ff001b7de0a">
+                    <propertyInstance
+                      Id="89b6ac32-17f1-46e1-8ad9-1bf5a4a3cd0b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a876d38a-4ed7-4f58-a61c-7e7192471f5c">
+                    <propertyInstance
+                      Id="ad7b6ed2-9ef8-455d-822f-d5fa85835a7d"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa73bde0-06aa-4083-93b0-f185f1c55391">
+                    <propertyInstance
+                      Id="21ba0dd7-bd05-47f3-ad71-ad3fa37f45d6"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f647fdb1-c78c-4e08-a9d5-9bd0eb651c41">
+                    <propertyInstance
+                      Id="8670d62e-b3d8-4c90-9eb1-bb68dd663100"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="feb4765c-411a-4283-b523-da1eb7a6015b">
+                    <propertyInstance
+                      Id="28e8ae71-0775-468d-abb8-6997e90da4dc"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ce4ffca4-86f4-438f-b8f7-b4de6a575a92"
+                LastKnownName="AbsCRCProvider"
+                LastKnownLocation="Package2_1744.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="55770366-e98f-4656-b537-dc5bda895c81"
+            name="s_Symbol"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isOrdered="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="7b71505a-2798-4415-ab51-119c816797e1"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusUtility Member%3Ds_Symbol"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="55afd1e3-720b-4a86-a2cb-c4fea3da1c90"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2e43607-b79d-4f68-b6f5-a4e3d94ae01d">
+                    <propertyInstance
+                      Id="6e742654-328a-4915-bde1-fc676b615aa3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b677cf0e-0e93-4e31-9a74-32b3166e9b32">
+                    <propertyInstance
+                      Id="551d5b5f-9f8c-42e4-b713-3f5825f325f8"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31ca9bd6-cb32-426e-9045-eadf686e102d">
+                    <propertyInstance
+                      Id="0f3956f2-49f1-4951-a36d-f5143bc1e742"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c3d94d5c-5429-4ce8-a8ca-916dc93ce1dc">
+                    <propertyInstance
+                      Id="606b2ff3-76e3-4ec7-ab6d-2b67988d2144"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6147885f-4613-47b3-a90d-5c80ef9a6d89">
+                    <propertyInstance
+                      Id="16c12520-7ed5-4f5a-b5ec-780084203865"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <lowerValueInternal>
+              <literalString
+                Id="d9cc71bb-5373-425f-a5bf-aa60cc6b210b"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="42737733-42ba-4c5d-b9d1-cf4afb098d81"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Tako.Modbus.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="cf2603f7-931f-4697-8db9-1bb55473f3fc"
+            name="ModbusUtility"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6aa5b245-2caf-4532-8f01-6ad08d8a2416"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusUtility Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8dc9db32-12a9-4a2c-bf5e-326aa9201382"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33558a17-6323-480c-b3ba-049f04d09dbf">
+                    <propertyInstance
+                      Id="7883e14d-be7c-4355-a1e1-b299bbfa5765"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="92352fab-6946-4e4e-a498-b0bb46fe5041">
+                    <propertyInstance
+                      Id="1d6159b2-de4d-46f6-a4c9-a2faae757d90"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fc085420-1f61-4e50-820f-b82e7b327b45">
+                    <propertyInstance
+                      Id="a08f1112-44c8-4f02-b8c9-ce34c2bed10d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eae3d0c9-6d9a-4bf7-9b53-374691a36b4b">
+                    <propertyInstance
+                      Id="88074e30-09cd-4056-9de2-c2bc053642a3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ddfac17e-3598-4d4e-b9de-7bcfe26c79cb">
+                    <propertyInstance
+                      Id="c63be7b6-ecbc-466e-a60d-d7ee688bd20c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cde88975-dc53-4c5b-b631-bc3e674ed22e">
+                    <propertyInstance
+                      Id="bf2d9fbd-2873-4b66-9634-dcb6e18eaea4"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="cc5bafa2-4c63-4a73-b776-aac79056e824"
+            name="BytesToBinaryString"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0e40d727-caa1-4874-b8df-64bd5e579c26"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusUtility Member%3D(Name%3DBytesToBinaryString OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DByte ArrayRank%3D1 ParentType%3DByte))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="235edba4-01c6-4288-90fc-c3b5f416e575"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0bae3b0d-e3ff-4f82-89a8-b6c054d2a574">
+                    <propertyInstance
+                      Id="15470c52-8bce-4c13-88d9-f7d865c1fa9a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e898f0f0-d89f-460d-b23c-a9584eca00c3">
+                    <propertyInstance
+                      Id="6c90f12a-66e4-458d-a9a9-d7bee16b82ef"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3d87373a-ada1-43b9-9e34-01c0a56195f8">
+                    <propertyInstance
+                      Id="1ea8eec4-7092-4ba8-b3e9-d725aba5e272"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d9cd320-ccf0-4b5b-9780-8b2585bab708">
+                    <propertyInstance
+                      Id="ae8c48e5-248c-4cc2-bfc1-092538866522"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0fdd09f4-db04-4d67-ba03-127b4f7f00c7">
+                    <propertyInstance
+                      Id="124eb5ea-3e15-49d6-9ae7-e9c68b92c492"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="349739a2-b646-4bb5-88e0-80c1ffb036ed">
+                    <propertyInstance
+                      Id="2f961fa3-f54f-40bc-ab76-46265f57f6e2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c74841d2-bd08-485e-963e-ce2b43290319"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Tako.Modbus.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="214df78f-5209-47b7-9186-88a0c4d3d989"
+                  name="HexArray"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="b3d32ed4-2f60-4a2f-bfe1-3805e77e82f4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusUtility Member%3D(Name%3DBytesToBinaryString OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DByte ArrayRank%3D1 ParentType%3DByte))]) ParameterIdentifier%3DHexArray"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="739015ee-b2a2-46c1-bcd8-9e4736a0c457"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="085ad818-24ce-407a-a401-49159300f9fb"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="358061a7-c0e6-4638-b252-55f3b8b8da76"
+                      LastKnownName="Byte"
+                      LastKnownLocation="Package3_1517.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d21fdbb4-aeeb-494b-9d3f-3f7a57ddaaff"
+            name="BytesToHexString"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d246d531-7b5e-4d81-8411-c82e31f97938"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusUtility Member%3D(Name%3DBytesToHexString OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DByte ArrayRank%3D1 ParentType%3DByte))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="64ec765e-97f0-40e2-b218-b69879686ee7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c75cf710-9e6b-4d29-975f-d51737d36c58">
+                    <propertyInstance
+                      Id="09a78816-754c-4c3c-a11d-6fd8846f06c9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e8669f43-1e1c-495b-9f5d-d05e302284c7">
+                    <propertyInstance
+                      Id="60beb786-4b66-480a-b4b4-9012a5ee0066"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ab60480-f529-45d3-89fc-a0ad7d9c3a67">
+                    <propertyInstance
+                      Id="6d0bc966-9b8a-4fbd-af14-c1e07de70f6d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b3ef4d43-8599-4ee2-aad8-ca1d3132b527">
+                    <propertyInstance
+                      Id="007d02ea-e546-426c-a10f-48c522289a39"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8a262d00-3483-4d24-8783-3f08d39c097c">
+                    <propertyInstance
+                      Id="ebb870f8-a627-42d4-8e35-18903993eeab"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2cca96fe-46c9-4acc-bd93-5f1d2138d763">
+                    <propertyInstance
+                      Id="bc5e1a4c-6749-4c45-b085-f88f52520f55"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0dabc3fa-9e7f-402f-86b1-12685bc11586"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Tako.Modbus.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="231ca76b-19e6-427a-a2dc-cfe8e10405a1"
+                  name="HexArray"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="4def4f0f-49c4-448e-9c17-b53ff0401d0f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusUtility Member%3D(Name%3DBytesToHexString OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DByte ArrayRank%3D1 ParentType%3DByte))]) ParameterIdentifier%3DHexArray"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ae816fb3-a398-412e-9284-0a4d68a0d106"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="84bc9f8a-77c7-475b-8330-7f576e0e96eb"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="358061a7-c0e6-4638-b252-55f3b8b8da76"
+                      LastKnownName="Byte"
+                      LastKnownLocation="Package3_1517.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ae6f6a66-b901-42d5-a1f5-a34500124c70"
+            name="CalculateCRC"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d7d6219b-30d7-4c0b-a134-e0d057c3deee"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusUtility Member%3D(Name%3DCalculateCRC OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DByte ArrayRank%3D1 ParentType%3DByte))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d10a5817-b9cd-4635-9957-4cebd021a0aa"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="455618ec-459b-48f0-b16b-b49a55844756">
+                    <propertyInstance
+                      Id="6fe6f0ed-ef71-47dd-8162-960409956cc1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="672aeccd-c321-4eb9-917f-bcb45364c3c9">
+                    <propertyInstance
+                      Id="85ae02af-5802-473c-a6d6-d3ffb2fd39dc"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="89ad9aa2-765d-421f-8b32-eae14865eff5">
+                    <propertyInstance
+                      Id="cd9662ba-4868-490a-aef0-c1428aac6418"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4a4d1541-0ec0-4af7-b492-e1ea27ac5721">
+                    <propertyInstance
+                      Id="8c78b339-6dc6-4dde-b6bd-1b32f38a87d4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8e69d060-ff2d-45c7-b706-07b470ab3d7d">
+                    <propertyInstance
+                      Id="1e928f26-01a8-4655-bc71-4f2c500c1480"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ad5e51ad-82c3-4bc3-882d-4211c0ce8b96">
+                    <propertyInstance
+                      Id="7a43ab66-fdf7-4ea8-a2d2-06dc16c23d64"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="14de2bc6-16f6-47dd-8493-6f602801f17f"
+                  direction="Return"
+                  isOrdered="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f846a308-fae7-4805-bcb3-6c1d5d85ccd6"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2d3ce652-0ea7-4bc2-89d5-f45e3588118e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="358061a7-c0e6-4638-b252-55f3b8b8da76"
+                      LastKnownName="Byte"
+                      LastKnownLocation="Package3_1517.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a55c14da-d503-4738-9168-88111fe0480f"
+                  name="DataArray"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="24d2a983-8e9d-4bca-9560-f4ee1b8a0668"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusUtility Member%3D(Name%3DCalculateCRC OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DByte ArrayRank%3D1 ParentType%3DByte))]) ParameterIdentifier%3DDataArray"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="0da458ee-5a16-4bec-8c2b-abdbb032b08f"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="37d277a2-1339-4b24-ba15-2601242652f3"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="358061a7-c0e6-4638-b252-55f3b8b8da76"
+                      LastKnownName="Byte"
+                      LastKnownLocation="Package3_1517.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="89667151-c99e-461b-a1f5-62fec57462f4"
+            name="CalculateLRC"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3d5986ee-7c2a-4606-b898-10bcd8cd122f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusUtility Member%3D(Name%3DCalculateLRC OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DByte ArrayRank%3D1 ParentType%3DByte))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4483b5d2-415e-41b6-aebd-51871607d89b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9d10ae60-bd24-4845-8994-e8b315571660">
+                    <propertyInstance
+                      Id="57732f55-84c9-4952-b1b3-80ea1bfd2a8f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a34b13e2-2dfd-4108-b050-ea83e685e3ad">
+                    <propertyInstance
+                      Id="62ba77f5-c2a6-4246-be92-a14e55bc93c7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf4ddb1b-675a-4a6a-8764-81cb7838ac91">
+                    <propertyInstance
+                      Id="0ed69401-a0ac-4071-a502-ec1785637d26"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7cf652bd-d88e-4056-ae95-c542335cedf4">
+                    <propertyInstance
+                      Id="18d03558-78b7-4d3f-b85c-f0192bfe099c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a988940-515e-4c4f-bb1a-344a83b1f394">
+                    <propertyInstance
+                      Id="ad151d23-040f-4734-9748-8fb80774bd4a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a6617b7f-fab2-41ce-855c-f9019450b539">
+                    <propertyInstance
+                      Id="6e973d0e-aa21-43f4-be77-41bff0e5c17f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9c374778-044c-4497-9914-69891dc1a26d"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Tako.Modbus.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7b76b245-e56d-45ce-b3e6-46256e63878c"
+                  name="DataArray"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="a9f1ed43-c074-44aa-9b05-3951fea023e1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusUtility Member%3D(Name%3DCalculateLRC OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DByte ArrayRank%3D1 ParentType%3DByte))]) ParameterIdentifier%3DDataArray"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="798d6f79-d670-435d-bb8f-cd62111d7154"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="596321b0-ca7e-4737-b9fb-3addacaafc6c"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="358061a7-c0e6-4638-b252-55f3b8b8da76"
+                      LastKnownName="Byte"
+                      LastKnownLocation="Package3_1517.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8ae929eb-6829-430e-827d-12fa446ffe75"
+            name="HexStringToBytes"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2d64f26f-5275-479f-93aa-423416f0a14c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusUtility Member%3D(Name%3DHexStringToBytes OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="eb148350-3725-4fd8-ba90-e60c9d32fc30"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc3ff547-e601-4f3d-8a65-446dd7339414">
+                    <propertyInstance
+                      Id="56c62a78-1da7-4f6a-a180-bc2a077f68e5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="24a2f978-c892-4e3b-9ec7-821e00a5acba">
+                    <propertyInstance
+                      Id="c5832e4f-723b-4de1-a1f3-972bbd99a49b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62f606c2-62e3-492f-af7a-1316c116a2c7">
+                    <propertyInstance
+                      Id="7b3dde2b-29ce-4231-a0d5-158f6c5abb98"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1ef5757b-a2b3-4089-bcf6-3211dde90afe">
+                    <propertyInstance
+                      Id="e8197c0b-b7f6-4fb2-88c8-c03bb103ec03"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d9dc2d8-2793-479c-9540-2c46242b8e42">
+                    <propertyInstance
+                      Id="7fac39ed-9ebe-4ac0-bec8-11a73cf3ce3c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3985e2b9-ae7d-4481-8e98-4c3d5a422c44">
+                    <propertyInstance
+                      Id="633ae9c2-e527-4112-a3e4-72225f250589"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="91e0a574-ff50-4732-81cf-c9812e17bdba"
+                  direction="Return"
+                  isOrdered="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d3509170-cf45-4ac8-b470-4bad23f8d47e"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="cf2d1d78-edb4-419b-9f92-4401a7f932d2"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="358061a7-c0e6-4638-b252-55f3b8b8da76"
+                      LastKnownName="Byte"
+                      LastKnownLocation="Package3_1517.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="769af63d-1ae4-4297-a9df-7e15cc9a7c6c"
+                  name="Hex"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="35ecf702-17db-4dd5-b605-9d29ab17784d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusUtility Member%3D(Name%3DHexStringToBytes OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DHex"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Tako.Modbus.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="e456a93c-555a-43ae-9aa0-b71847fb8d41"
+        name="EnumModbusFunctionCode"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="7caaa919-a378-4ea5-a384-4bc947ae889c"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusFunctionCode"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6aa788ed-92cf-487f-86cc-bfa40cb9aa0c"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ae6f3817-d672-4d3c-bc14-c46f9cd9fb4c">
+                <propertyInstance
+                  Id="48f66d1e-fb4a-4582-8923-1e43a15b4925"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5f37d8bf-a859-46d4-bbb0-ee7b66f63c9b">
+                <propertyInstance
+                  Id="d5380ef2-ddf1-4cbd-a884-dbcd21e54a6d"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f5ae0bc7-de62-4505-bb91-498061866feb">
+                <propertyInstance
+                  Id="de41f8e5-2afa-4e3f-bab6-d5761d2e9e40"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="c559eefa-097e-4e6b-a6e8-98459d1fbaec"
+            name="Diagnostics">
+            <referencesInternal>
+              <reference
+                Id="d17de895-e84b-4e9a-96b3-010ecd8f1351"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusFunctionCode Member%3DDiagnostics"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="82f8d411-f689-4ffb-ad3a-f24594346ccb"
+            name="ReadCoils">
+            <referencesInternal>
+              <reference
+                Id="48221bd1-6633-4679-8007-7f1cddd59606"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusFunctionCode Member%3DReadCoils"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="46486686-3eb1-4e28-a1af-7404e0f45e20"
+            name="ReadDiscreteInputs">
+            <referencesInternal>
+              <reference
+                Id="df4b0760-68db-4041-973a-be5188c44fe6"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusFunctionCode Member%3DReadDiscreteInputs"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="b6899bc9-0bfe-481f-ae72-136a6246ec9d"
+            name="ReadHoldingRegisters">
+            <referencesInternal>
+              <reference
+                Id="a6da94c9-79cc-49ab-81d9-f850daaf3d36"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusFunctionCode Member%3DReadHoldingRegisters"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="bdb5143a-e1c6-4131-9bb1-56fdf4e6d6fb"
+            name="ReadInputRegisters">
+            <referencesInternal>
+              <reference
+                Id="c004569d-7cf8-4d4c-a80a-315ec8028b99"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusFunctionCode Member%3DReadInputRegisters"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="5d94af5a-fc51-4ee4-b490-b1e822353b29"
+            name="ReadWriteMultipleRegisters">
+            <referencesInternal>
+              <reference
+                Id="89d9c602-f1f2-4576-be15-b76fbe8c7d12"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusFunctionCode Member%3DReadWriteMultipleRegisters"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="872e18a9-8fb6-4537-91ed-86636c3a9ed6"
+            name="WriteMultipleCoils">
+            <referencesInternal>
+              <reference
+                Id="2d535dad-5c09-4ef7-8b55-a1bb17031f33"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusFunctionCode Member%3DWriteMultipleCoils"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="4c6b8260-1506-45eb-b0fc-cb327974ae08"
+            name="WriteMultipleRegisters">
+            <referencesInternal>
+              <reference
+                Id="8165f97b-394e-4741-8b96-7626b802fcd1"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusFunctionCode Member%3DWriteMultipleRegisters"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="6a37f37e-050c-4636-8e9d-3a380a40ecb1"
+            name="WriteSingleCoil">
+            <referencesInternal>
+              <reference
+                Id="731b6b88-120b-43c3-a3d3-d51e27eef66a"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusFunctionCode Member%3DWriteSingleCoil"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="c6f8aaec-de73-431c-b727-d1bbd78a1a46"
+            name="WriteSingleRegister">
+            <referencesInternal>
+              <reference
+                Id="f0d03d0a-36ed-4174-bc16-3da7124eaac0"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusFunctionCode Member%3DWriteSingleRegister"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="fde48a3b-4117-4ecd-afd2-5447533d708a"
+        name="EnumModbusFraming"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="f94f852d-337c-4911-9121-e52f4f8e4397"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusFraming"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b4c8874e-1f24-4aef-93ac-9a94244ed32e"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5723e17f-530f-4123-9eee-e88f895f5f2f">
+                <propertyInstance
+                  Id="adc72ad5-8eaa-4a5e-a4ae-e0da2e4a5f09"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c89ee221-7b19-4f34-bec2-b30d06262de1">
+                <propertyInstance
+                  Id="fd95d573-ac2b-48f4-9f81-e8afc721e238"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0fc02f18-e7b5-4bc2-ad01-541f6d691ef8">
+                <propertyInstance
+                  Id="30b1a271-c4c1-4b95-b718-7b8655595a4a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="f856e5d8-fb2d-436e-b7d1-cc5b1e37b577"
+            name="ASCII">
+            <referencesInternal>
+              <reference
+                Id="1cdb5ae1-f7d9-4116-a7ee-c6dac91de69e"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusFraming Member%3DASCII"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="3024270d-8225-48da-b8e3-3a40238eeb02"
+            name="RTU">
+            <referencesInternal>
+              <reference
+                Id="8bc53a42-4cdd-4482-a344-2234079e2789"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusFraming Member%3DRTU"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="ddaed6b8-5aa8-453b-bb04-c4f3f89e0717"
+            name="TCP">
+            <referencesInternal>
+              <reference
+                Id="0cd27453-4bec-46f3-b682-65fd228aec04"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DEnumModbusFraming Member%3DTCP"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1290af7b-3be3-445d-9623-e1c8fc2019d1"
+        name="ModbusException"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="eb312fae-9646-46b5-b4bf-9a3ec8dad5a8"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusException"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="10c34ee1-652a-4315-b83e-21a6f7c0e3a2"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="104888e0-1e73-4013-9c19-ad1dc089d9b7">
+                <propertyInstance
+                  Id="b7d4976f-a55c-40a2-856c-b1369de2713d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="acdcdfab-63b3-4905-806e-4288f50f4ab8">
+                <propertyInstance
+                  Id="3abc9a08-ee70-466e-8ede-6f413b6f214e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="13fa4c77-ab5a-4b13-8ad5-309d045ef507">
+                <propertyInstance
+                  Id="d3a4b5f4-3ccd-4d37-a5e7-65b01024931f"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="789659ba-025d-4f59-a3d6-f9ff325850a6">
+                <propertyInstance
+                  Id="42c1c3da-1dde-4bf2-9716-3e7c3c0aeafa"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a7de4826-9aa2-4fbe-b746-e0ee0fdca581">
+                <propertyInstance
+                  Id="c0a36cc6-2eb5-4e48-afd5-b1b04e9859ab"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="154f2f4b-1d52-43f4-8ca9-fc9d635de4da"
+            isSubstitutable="false">
+            <classMoniker
+              Id="44aad927-f7f7-4ecb-b2dd-627305ff62d4"
+              LastKnownName="Exception"
+              LastKnownLocation="Package3_1517.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="9267cfd3-75fd-4c76-8420-84e2d6ba622e"
+            isDerived="false"
+            sourceEndRoleName="ModbusException"
+            targetEndRoleName="Code"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="358061a7-c0e6-4638-b252-55f3b8b8da76"
+              LastKnownName="Byte"
+              LastKnownLocation="Package3_1517.uml" />
+            <description>Property Code references type Byte.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="462e2aab-5b8d-4a26-bc15-cea581c1d961"
+                  name="ModbusException"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9e8eb5e1-a417-4cd2-a25b-bdbd119c0bc6"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="21c36c15-d15f-419d-8996-15ba13cc869a"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ecf6e099-5afc-4489-b910-06a57468f354"
+                  name="Code"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="37241756-7993-4edb-a5eb-70908748aa46"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a67158d8-4f6d-472a-ab55-436e0339a5a6"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="2ad30dd4-27b4-456d-83b6-adba950437b4"
+            name="Code"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="ebbbeddd-eaae-41f6-bcb0-68c0904001f3"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusException Member%3DCode"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d6a1a81a-f7af-47db-b7f6-8a751ab73bf4"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5056c140-248b-45b6-a920-6ebb6870f882">
+                    <propertyInstance
+                      Id="f82fbefc-baa4-46cc-b06e-419e8e09e3ae"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="123c01d1-395f-4c3c-818b-61b5a0182305">
+                    <propertyInstance
+                      Id="0d32340d-29e4-4850-90d8-c9eaee5c0187"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0a951251-8a06-4f49-9941-12b697629ac4">
+                    <propertyInstance
+                      Id="9de394c7-4742-41de-a216-56fa9c35de03"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba42f28b-3114-45ec-b49b-319d3b3d53c9">
+                    <propertyInstance
+                      Id="9dbd892d-db16-4d10-aa44-93c23704ab51"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f7f665e-ba7e-4373-8f19-bb575e4363b9">
+                    <propertyInstance
+                      Id="30ee21af-700d-49d8-bbda-e9ba46eb4103"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c6b4ddd-e8b2-4d32-b425-277b294979e2">
+                    <propertyInstance
+                      Id="b90d4bc5-74c3-47cc-9ec7-8f99f7c31926"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6afe8227-fcc5-4f19-bbc4-a33ac6a2879d">
+                    <propertyInstance
+                      Id="9f522aba-c61c-4796-a70e-605e2d8bad8c"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="358061a7-c0e6-4638-b252-55f3b8b8da76"
+                LastKnownName="Byte"
+                LastKnownLocation="Package3_1517.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9fc69faf-fceb-4619-8c85-89d407afde01"
+            name="Description"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="e4860ee3-15e7-4fc9-a206-a664b8ac23ea"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusException Member%3DDescription"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="836030f1-8b0c-4635-b656-e66e6ef0a1c6"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e9b74131-d88c-4b66-a5ef-57b3c7cb4043">
+                    <propertyInstance
+                      Id="b0df2f8a-55ba-4389-8a62-267896c88b0a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a44d6f86-a92f-44af-977d-28098d8c14d3">
+                    <propertyInstance
+                      Id="ace86f4a-d8d5-48be-8949-27b4a0bc1112"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f53dd2be-966e-4f38-809f-7a33f65c5241">
+                    <propertyInstance
+                      Id="d7a3a4dc-e080-4fa2-a431-20e023d7f8b2"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6372406a-0417-4bcb-8593-14731597fd6d">
+                    <propertyInstance
+                      Id="9ed0dafb-593b-423f-8329-f4f9562a290d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="09fb001a-b6f9-4b73-97d3-72d1ed476f51">
+                    <propertyInstance
+                      Id="a4a40e4e-9572-4494-a905-4f751e46976d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="162c94cc-9074-4db8-9186-abcd33655e36">
+                    <propertyInstance
+                      Id="31f20fb5-a234-42f5-b5c7-15ad199b0a7b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="19516067-e448-4cbd-9f40-0ad3d1a2950c">
+                    <propertyInstance
+                      Id="14970baa-5348-4eca-a373-62dcb0a86535"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Tako.Modbus.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3f11d467-1027-4823-8de1-d6642ddfa288"
+            name="ModbusExceptionCollection"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5dc2fb6b-425a-4c2f-91ba-4895aaddf960"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusException Member%3DModbusExceptionCollection"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7f6017d2-f9ad-42a5-93ca-ed5b7ab2ab0f"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa5648c0-4795-49eb-ae53-bc52031d6202">
+                    <propertyInstance
+                      Id="34ceef78-7c5d-461c-bfb4-e536bfb8ae7a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="06f53131-de12-4921-a191-e4b9bdbc0904">
+                    <propertyInstance
+                      Id="41951464-1e0f-487a-a9f8-06a476065cf3"
+                      name="Get"
+                      value="private" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94799f07-8472-4b21-9cb0-ae3a371bc11c">
+                    <propertyInstance
+                      Id="5a5bc458-bb7f-4840-a231-24aed1bbeb13"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6311ace1-e91c-40f5-9415-1990b5662257">
+                    <propertyInstance
+                      Id="67e06fd1-1855-4a99-9d03-960de1830890"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="085b56ef-6758-482d-b900-d75e0c3ee1c8">
+                    <propertyInstance
+                      Id="20aaa9ba-1a87-42b7-ab80-e389098e9f15"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7e812c0-04fb-4cdf-939d-be61f9bdacbd">
+                    <propertyInstance
+                      Id="b0ee3886-8d31-4aac-b4ae-5c2d8cbc6543"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28e249cd-31c2-4005-bbbc-6939f2a330b1">
+                    <propertyInstance
+                      Id="3e674c59-b2f0-43c8-bc0e-eec2aadd50ef"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="812d9b8f-8089-4e2c-a323-98df476c6132"
+                LastKnownName="IEnumerable&lt;ModbusException‎&gt;"
+                LastKnownLocation="Package5_1517.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4a7abc46-7266-4943-b99b-408faaff4264"
+            name="s_ModbusExceptionCollection"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="60f3d559-4c5c-435c-95a5-f69429576741"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusException Member%3Ds_ModbusExceptionCollection"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fa09a417-186c-4af1-a16a-b74c5e7a8f24"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa9c9a0f-a2ac-4d66-8a68-a366bd02af7e">
+                    <propertyInstance
+                      Id="76c43bb0-c75f-4557-a5f1-0e30fbae71d7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c371711-3148-44e5-b65f-7331a2e4dbee">
+                    <propertyInstance
+                      Id="8fa40d8d-37f6-4223-bc58-a31b0f49bfd1"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ccf3afe-5da8-42d7-814d-06b6a0949ab9">
+                    <propertyInstance
+                      Id="a8899654-38de-42c6-95bb-ad5d96e3b4ce"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6027d82d-9d6b-4139-9e34-8a5f00d21b57">
+                    <propertyInstance
+                      Id="f5e060ee-becb-4a89-98df-1c6e55a1e78b"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa1d5268-901c-437e-91c9-b0cb39c8d581">
+                    <propertyInstance
+                      Id="769f8d37-7300-4dc3-8013-d29ec454d472"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="d471a27d-be7c-4092-8f0f-ca0e626ba7f2"
+                LastKnownName="List&lt;ModbusException‎&gt;"
+                LastKnownLocation="Package5_1517.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="24ab25a2-8934-4576-ae74-50709da034b2"
+            name="ModbusException"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="18a64197-baaa-499d-b5cd-13ce06d4bed2"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusException Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4e836161-dbb7-4e33-80a5-4ecb47a362f5"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ac63ab12-34f7-416b-91e3-ce55cd466ef7">
+                    <propertyInstance
+                      Id="cabbff08-3c8a-477c-94d4-6d43f1a6baa1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8b58b661-0bb2-4166-a55b-0e991992e54a">
+                    <propertyInstance
+                      Id="1bfa886a-0f09-4820-8f35-6eb55944bdf1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="46480ffd-2108-4a8a-9f4d-ff80edfe776c">
+                    <propertyInstance
+                      Id="a7829d5a-3099-4364-a0ad-ed6f3f53dc5c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6dadd422-53fd-4ee8-a222-e673664ceda6">
+                    <propertyInstance
+                      Id="a3228a70-a773-4ad8-85b5-a4dce084a4d6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="39150ec1-be3f-47e6-9f32-227136bd29c2">
+                    <propertyInstance
+                      Id="5722c40e-f428-4274-9291-5d4fb5c02924"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cc52cf73-da9a-4f58-b12c-dc974deea92a">
+                    <propertyInstance
+                      Id="1fae2875-e949-44d7-b270-9bb5968b9d17"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="f0fd13df-5cde-4994-a93e-c02a4810934c"
+            name="ModbusException"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="65d22910-3bba-4aac-9238-40560272b932"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusException Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DException)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1640a505-6f74-4abf-a5da-f592cd32f0d9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="070687db-230a-44e3-8c9d-b7d83d9b729e">
+                    <propertyInstance
+                      Id="15ce1d73-c650-4d96-bd13-1a23e1a1b3fd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="58c7f172-9edb-4033-aaa8-7b86e596c9f0">
+                    <propertyInstance
+                      Id="0784216c-35b1-4fd1-8e57-27c23c56b16b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="249ba79d-12eb-4e06-8d58-f672b66c61e4">
+                    <propertyInstance
+                      Id="abbab344-1d27-4630-919f-6adca342e40e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2c15c75-64d7-446c-a795-035958799350">
+                    <propertyInstance
+                      Id="5b6e5305-88e7-43af-8f9f-d34959400c9c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="47123f03-28e9-46c1-8ec8-9a640d1e45b2">
+                    <propertyInstance
+                      Id="06535390-021f-4341-9e81-1f61541307bd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="70f7d4d6-687b-40df-b3b1-f07f7905aa83">
+                    <propertyInstance
+                      Id="f179b919-d75b-4da2-8c31-2bd0cba2ee03"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d22769b5-0940-4082-9936-f48b787505f2"
+                  name="message"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="aff3ef66-3456-4f54-906a-794185601edf"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusException Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DException)]) ParameterIdentifier%3Dmessage"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Tako.Modbus.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0ce9b795-9fe7-4a13-b7d0-d99e28e3481a"
+                  name="inner"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ef2e4c78-31b1-46b2-8bc1-66e81bfdf4be"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusException Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DException)]) ParameterIdentifier%3Dinner"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="44aad927-f7f7-4ecb-b2dd-627305ff62d4"
+                      LastKnownName="Exception"
+                      LastKnownLocation="Package3_1517.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="eb4067b9-cd5d-4f16-bf00-01afbfd33b9d"
+            name="ModbusException"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="352a8574-0928-4ded-9726-d613c1e7f2dc"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusException Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="56060b87-f08d-46ae-9987-3e2dbb6df011"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="79681805-19b6-4238-9ba1-5ced7c9b4956">
+                    <propertyInstance
+                      Id="9a12e527-4a6d-42e2-80e2-9d8eac569318"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74bd4ca8-3a9e-4a05-b772-46c7297e33b5">
+                    <propertyInstance
+                      Id="b5b0c6be-4e1d-416c-96b5-a31c0b735a73"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a257e5d-270a-4ad1-af1a-3acef354f183">
+                    <propertyInstance
+                      Id="b856ad5e-eaee-4885-95c4-ac814d426f19"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f9734d91-8aca-4daa-81d8-c02e94fd0d86">
+                    <propertyInstance
+                      Id="9c55cef9-5217-484e-978a-690d5a66c15e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6dcad58a-b26b-46e4-8b1c-b607afcdf291">
+                    <propertyInstance
+                      Id="75277adc-a9dc-4624-a9cb-bb6362c63acd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6aa24b97-f1e2-48f8-9f7c-22888405f224">
+                    <propertyInstance
+                      Id="b8a4ca3a-3c14-4e6a-a8a7-a51403cc4550"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1fc44e98-8514-4e43-9d2e-895c2802c5c2"
+                  name="message"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6a88bfd7-1a28-44ac-ac4e-b67f3d04a718"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusException Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dmessage"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Tako.Modbus.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="65c09f06-7a75-41c1-9573-241174ba86c3"
+            name="ModbusException"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="127c4398-329a-464f-95da-5775d475821d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusException Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem.Runtime.Serialization Type%3DSerializationInfo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem.Runtime.Serialization Type%3DStreamingContext)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="734f24ff-e48f-434c-8286-620835fd77ff"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="83de5b25-d8c9-493c-b55f-a54a62fc711f">
+                    <propertyInstance
+                      Id="1785c2a0-f672-491f-91ee-0a46269576f5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be3bdb21-7558-4cb3-ad6e-e33a1b4cb37f">
+                    <propertyInstance
+                      Id="5290d9de-bbce-4219-a2e9-487d050bdaaf"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fbcc7743-afe2-41b7-8445-052b7eb607c0">
+                    <propertyInstance
+                      Id="f19fcc20-3327-4a3e-8097-529b99a08677"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dbef988e-8fa5-49f4-9876-46344f98828d">
+                    <propertyInstance
+                      Id="7923ebea-d27e-4568-a774-6eca404d5f5f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="854e2bc9-7ff2-411b-afd0-af5b56b22ce6">
+                    <propertyInstance
+                      Id="2d44bd66-ca01-4f56-8b2d-116c8b08c315"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="386efc01-4105-49b0-a426-24c091de661f">
+                    <propertyInstance
+                      Id="2513cd08-46f9-469f-922e-18ea2fe12bab"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="866d9001-67ad-4a2c-b08b-c71687a8b572"
+                  name="info"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9bab94ec-28d3-4c79-bac1-ce012cc6002e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusException Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem.Runtime.Serialization Type%3DSerializationInfo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem.Runtime.Serialization Type%3DStreamingContext)]) ParameterIdentifier%3Dinfo"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="f3449420-1b6b-4ba1-88b7-14787d7596f0"
+                      LastKnownName="SerializationInfo"
+                      LastKnownLocation="Package1_1744.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="201c9c92-6c64-4a19-84d5-996eb87e0f00"
+                  name="context"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="949fc0d7-fee1-4cdb-a213-c6ccfbc2c334"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusException Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem.Runtime.Serialization Type%3DSerializationInfo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem.Runtime.Serialization Type%3DStreamingContext)]) ParameterIdentifier%3Dcontext"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="7a2fadee-477c-40ae-95fc-9ca91db52371"
+                      LastKnownName="StreamingContext"
+                      LastKnownLocation="Package1_1744.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0946a84c-55cf-4b23-b953-794497f88906"
+            name="GetModbusException"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="158eab65-aaa9-41ae-871e-4b67ee2d0db2"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusException Member%3D(Name%3DGetModbusException OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DByte)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cd9a6f4a-e0e8-41cb-a1cb-9d15cb53e8aa"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7271f1df-08fa-4089-857a-2c91b01b4566">
+                    <propertyInstance
+                      Id="f802ce8e-dee9-4b0e-9c28-8fc3960d84f4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="757d3ec4-ffba-4e3d-b39f-62ac239f6d20">
+                    <propertyInstance
+                      Id="e3ac9096-b378-4606-a8b0-6cbd5d2d13b4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2d4630d3-2ac5-43d2-98e3-7e9b7c11e5ae">
+                    <propertyInstance
+                      Id="7144aa7c-65cd-4605-a69f-872f41d6ae87"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c758f11f-54af-4e09-9018-2de359fd56e3">
+                    <propertyInstance
+                      Id="30404f5a-0ac6-4308-b9d7-2b9fb497f78f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bafa2ac7-9f42-4cb3-ae38-fb45977e61a8">
+                    <propertyInstance
+                      Id="0b9eba91-c2f6-4dfc-a573-44289101fc21"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="09629e05-8577-4fca-a627-3a8db65534d8">
+                    <propertyInstance
+                      Id="57dba141-e995-4c50-b5fb-83668c74fe1c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3705986a-5dca-4282-b90c-3254c31e0fea"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1290af7b-3be3-445d-9623-e1c8fc2019d1"
+                      LastKnownName="ModbusException"
+                      LastKnownLocation="Package1_1517.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c7598ac4-dfe4-41a9-acbc-531019518d12"
+                  name="Code"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3c517dee-8fc9-4fb8-9563-1c12f9826cc4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2Ftfs.codeplex.com%2FTFS15%2FComponent%2FTako.Modbus%2FTako.Modbus%2Fbin%2FDebug%2FTako.Modbus.dll Namespace%3DTako.Modbus Type%3DModbusException Member%3D(Name%3DGetModbusException OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DByte)]) ParameterIdentifier%3DCode"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="358061a7-c0e6-4638-b252-55f3b8b8da76"
+                      LastKnownName="Byte"
+                      LastKnownLocation="Package3_1517.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

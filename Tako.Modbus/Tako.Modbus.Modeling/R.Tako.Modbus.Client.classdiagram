@@ -1,25 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="033c1c31-aba8-43ee-a7a1-f58e245a0edc" name="UMLClassDiagram1" linkedPackageId="19004ebc-548c-4d97-bbe1-3a65015f119d" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="492dff97-6d05-4416-a8a3-5b33f95bac44">
-      <profileInstance Id="550b3bda-904a-4fb0-aa4a-ea934633ac9f" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="654d8ef1-0763-4ffe-9460-9f7d76fee7d3">
-      <profileInstance Id="3985b7e3-7d1d-49ea-9c5b-26daf8cc7848" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="77694a54-f729-4ac8-a674-b30616b94593">
-      <profileInstance Id="b20bb84b-829e-4777-bbad-eb910229c0ef" name="CSharpProfile">
-        <elementDefinition Id="b4c6fc45-54de-4ed3-97b9-08a10c72a939" />
-      </profileInstance>
-      <elementDefinition Id="0e047a3e-250c-49ab-8dad-0b6f602834e9" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="d5fb8007-03a6-472b-ba91-4f0302678ca4" name="AbsModbusClient" isAbstract="true" isLeaf="false" isActiveClass="false">
@@ -21603,5 +21583,25 @@
   </packagedElements>
   <package Id="19004ebc-548c-4d97-bbe1-3a65015f119d" name="Tako.Modbus.Modeling">
     <elementDefinition Id="9b61c38d-8a8a-4612-a136-10f98bace5d0" />
+    <profileInstances>
+      <packageHasProfileInstances Id="492dff97-6d05-4416-a8a3-5b33f95bac44">
+        <profileInstance Id="550b3bda-904a-4fb0-aa4a-ea934633ac9f" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="654d8ef1-0763-4ffe-9460-9f7d76fee7d3">
+        <profileInstance Id="3985b7e3-7d1d-49ea-9c5b-26daf8cc7848" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="77694a54-f729-4ac8-a674-b30616b94593">
+        <profileInstance Id="b20bb84b-829e-4777-bbad-eb910229c0ef" name="CSharpProfile">
+          <elementDefinition Id="b4c6fc45-54de-4ed3-97b9-08a10c72a939" />
+        </profileInstance>
+        <elementDefinition Id="0e047a3e-250c-49ab-8dad-0b6f602834e9" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

@@ -107,8 +107,8 @@ namespace Tako.Modbus.Client
             var socketError = new SocketError();
             byte[] responseArray = null;
 
-            var retryCount = 0;
-            Stopwatch sw = new Stopwatch();
+            var retrTime = 0;
+
             using (MemoryStream memory = new MemoryStream())
             {
                 while (true)
@@ -121,23 +121,19 @@ namespace Tako.Modbus.Client
                             break;
                         }
                         memory.Write(bufferArray, 0, receiveCount);
-                        sw.Restart();
-                        retryCount = 0;
+
+                        retrTime = 0;
                     }
 
-                    //if (retryCount > this.RetryTime)
-                    //{
-                    //    break;
-                    //}
-                    //if (sw.ElapsedMilliseconds >= this.ReceiveTimeout)
-                    //{
-                    //    break;
-                    //}
+                    retrTime++;
 
-                    retryCount++;
+                    if (retrTime > this.RetryTime)
+                    {
+                        break;
+                    }
 
                     //空轉
-                    SpinWait.SpinUntil(() => retryCount > this.RetryTime, this.ReceiveTimeout);
+                    SpinWait.SpinUntil(() => retrTime > this.RetryTime, this.RetryTimeInterval);
                 }
 
                 this.ModbusClient.ReceiveTimeout = tempTimeOut;

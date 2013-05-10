@@ -92,7 +92,7 @@ namespace Tako.Modbus.Client
             this.ModbusSerialPort.ReadTimeout = this.ReceiveTimeout;
             byte[] bufferArray = new byte[256];
             byte[] resultArray = null;
-            var retryCount = 0;
+            var retryTime = 0;
 
             using (MemoryStream stream = new MemoryStream())
             {
@@ -108,12 +108,16 @@ namespace Tako.Modbus.Client
                             break;
                         }
 
-                        retryCount = 0;
+                        retryTime = 0;
                     }
-                    retryCount++;
+                    retryTime++;
+                    if (retryTime > this.RetryTime)
+                    {
+                        break;
+                    }
 
                     //空轉
-                    SpinWait.SpinUntil(() => retryCount > this.RetryTime, this.ReceiveTimeout);
+                    SpinWait.SpinUntil(() => retryTime > this.RetryTime, this.RetryTimeInterval);
                 }
             }
 

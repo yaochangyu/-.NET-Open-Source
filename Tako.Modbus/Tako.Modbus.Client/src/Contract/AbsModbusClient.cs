@@ -20,6 +20,7 @@ namespace Tako.Modbus.Client
         private bool _isConnected = false;
         private int _retryTime = 10;
         private ushort? _transactionID;
+        private int _retryTimeInterval = 100;
 
         //virtual properties
         public virtual bool IsConnected
@@ -44,6 +45,12 @@ namespace Tako.Modbus.Client
         {
             get { return _retryTime; }
             set { _retryTime = value; }
+        }
+
+        public int RetryTimeInterval
+        {
+            get { return _retryTimeInterval; }
+            set { _retryTimeInterval = value; }
         }
 
         public virtual ushort? TransactionID

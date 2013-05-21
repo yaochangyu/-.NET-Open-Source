@@ -35,7 +35,7 @@ namespace Tako.Modbus.Client
             }
         }
 
-        protected virtual byte GetByteCount(ushort Quantity)
+        protected virtual byte GetMultiOutputCount(ushort Quantity)
         {
             byte i = (byte)(Quantity / 8);
             byte j = (byte)(Quantity - (i * 8));
@@ -53,7 +53,7 @@ namespace Tako.Modbus.Client
             return counter;
         }
 
-        protected virtual byte[] GetByteCount(short[] OutputValues)
+        protected virtual byte[] GetMultiOutputCount(short[] OutputValues)
         {
             byte counter = 0;
             byte[] outputArray = null;
@@ -73,20 +73,147 @@ namespace Tako.Modbus.Client
             return outputArray;
         }
 
-        public abstract byte[] ReadCoils(byte Unit, ushort StartAddress, ushort Quantity);
+        protected abstract byte[] CreateRequestMessage(byte Unit, EnumModbusFunctionCode FunctionCode, byte? MultiOutputLength, params byte[] Parameters);
 
-        public abstract byte[] ReadDiscreteInputs(byte Unit, ushort StartAddress, ushort Quantity);
+        public virtual byte[] ReadCoils(byte Unit, ushort StartAddress, ushort Quantity)
+        {
+            this.QuantityValidate(StartAddress, Quantity, 1, 2000);
 
-        public abstract byte[] ReadHoldingRegisters(byte Unit, ushort StartAddress, ushort Quantity);
+            var parameters = new byte[]
+            {
+                (byte)(StartAddress >> 8),
+                (byte)(StartAddress),
+                (byte)(Quantity >> 8),
+                (byte)Quantity
+            };
+            var requestArray = this.CreateRequestMessage(Unit, EnumModbusFunctionCode.ReadCoils, null, parameters);
+            return requestArray;
+        }
 
-        public abstract byte[] ReadInputRegisters(byte Unit, ushort StartAddress, ushort Quantity);
+        public virtual byte[] ReadDiscreteInputs(byte Unit, ushort StartAddress, ushort Quantity)
+        {
+            this.QuantityValidate(StartAddress, Quantity, 1, 2000);
 
-        public abstract byte[] WriteSingleCoil(byte Unit, ushort OutputAddress, bool OutputValue);
+            var parameters = new byte[]
+            {
+                (byte)(StartAddress >> 8),
+                (byte)(StartAddress),
+                (byte)(Quantity >> 8),
+                (byte)Quantity
+            };
+            var requestArray = this.CreateRequestMessage(Unit, EnumModbusFunctionCode.ReadDiscreteInputs, null, parameters);
+            return requestArray;
+        }
 
-        public abstract byte[] WriteSingleRegister(byte Unit, ushort OutputAddress, short OutputValue);
+        public virtual byte[] ReadHoldingRegisters(byte Unit, ushort StartAddress, ushort Quantity)
+        {
+            this.QuantityValidate(StartAddress, Quantity, 1, 175);
 
-        public abstract byte[] WriteMultipleCoils(byte Unit, ushort StartAddress, ushort Quantity, byte[] OutputValues);
+            var parameters = new byte[]
+            {
+                (byte)(StartAddress >> 8),
+                (byte)(StartAddress),
+                (byte)(Quantity >> 8),
+                (byte)Quantity
+            };
+            var requestArray = this.CreateRequestMessage(Unit, EnumModbusFunctionCode.ReadHoldingRegisters, null, parameters);
+            return requestArray;
+        }
 
-        public abstract byte[] WriteMultipleRegisters(byte Unit, ushort StartAddress, ushort Quantity, short[] OutputValues);
+        public virtual byte[] ReadInputRegisters(byte Unit, ushort StartAddress, ushort Quantity)
+        {
+            this.QuantityValidate(StartAddress, Quantity, 1, 175);
+
+            var parameters = new byte[]
+            {
+                (byte)(StartAddress >> 8),
+                (byte)(StartAddress),
+                (byte)(Quantity >> 8),
+                (byte)Quantity
+            };
+            var requestArray = this.CreateRequestMessage(Unit, EnumModbusFunctionCode.ReadInputRegisters, null, parameters);
+            return requestArray;
+        }
+
+        public virtual byte[] WriteSingleCoil(byte Unit, ushort OutputAddress, bool OutputValue)
+        {
+            ushort outputValue = 0x0000;
+            if (OutputValue)
+            {
+                outputValue = 0xFF00;
+            }
+
+            var parameters = new byte[]
+            {
+                (byte)(OutputAddress >> 8),
+                (byte)(OutputAddress),
+                (byte)(outputValue >> 8),
+                (byte)(outputValue),
+            };
+            var requestArray = this.CreateRequestMessage(Unit, EnumModbusFunctionCode.WriteSingleCoil, null, parameters);
+            return requestArray;
+        }
+
+        public virtual byte[] WriteSingleRegister(byte Unit, ushort OutputAddress, short OutputValue)
+        {
+            var parameters = new byte[]
+            {
+                (byte)(OutputAddress >> 8),
+                (byte)(OutputAddress),
+                (byte)(OutputValue >> 8),
+                (byte)(OutputValue),
+            };
+            var requestArray = this.CreateRequestMessage(Unit, EnumModbusFunctionCode.WriteSingleRegister, null, parameters);
+            return requestArray;
+        }
+
+        public virtual byte[] WriteMultipleCoils(byte Unit, ushort StartAddress, ushort Quantity, byte[] OutputValues)
+        {
+            this.QuantityValidate(StartAddress, Quantity, 1, 0x07B0);
+
+            byte counter = this.GetMultiOutputCount(Quantity);
+
+            if (counter != OutputValues.Length)
+            {
+                ModbusException.GetModbusException(0x03);
+            }
+
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                memoryStream.WriteByte((byte)(StartAddress >> 8));
+                memoryStream.WriteByte((byte)(StartAddress));
+                memoryStream.WriteByte((byte)(Quantity >> 8));
+                memoryStream.WriteByte((byte)(Quantity));
+                memoryStream.WriteByte((byte)(counter));
+                memoryStream.Write(OutputValues, 0, OutputValues.Length);
+                var requestArray = this.CreateRequestMessage(Unit, EnumModbusFunctionCode.WriteMultipleCoils, (byte)OutputValues.Length, memoryStream.ToArray());
+                return requestArray;
+            }
+        }
+
+        public virtual byte[] WriteMultipleRegisters(byte Unit, ushort StartAddress, ushort Quantity, short[] OutputValues)
+        {
+            this.QuantityValidate(StartAddress, Quantity, 1, 0x007B);
+
+            byte[] outputArray = this.GetMultiOutputCount(OutputValues);
+            byte counter = (byte)outputArray.Length;
+
+            if (Quantity * 2 != outputArray.Length)
+            {
+                ModbusException.GetModbusException(0x02);
+            }
+
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                memoryStream.WriteByte((byte)(StartAddress >> 8));
+                memoryStream.WriteByte((byte)(StartAddress));
+                memoryStream.WriteByte((byte)(Quantity >> 8));
+                memoryStream.WriteByte((byte)(Quantity));
+                memoryStream.WriteByte((byte)(counter));
+                memoryStream.Write(outputArray, 0, outputArray.Length);
+                var requestArray = this.CreateRequestMessage(Unit, EnumModbusFunctionCode.WriteMultipleRegisters, (byte)outputArray.Length, memoryStream.ToArray());
+                return requestArray;
+            }
+        }
     }
 }

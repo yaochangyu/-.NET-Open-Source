@@ -78,9 +78,16 @@ namespace Tako.Modbus.Client.UnitTest
             ushort Quantity = 0;
             ushort Transaction = 0;
             byte[] expected = null;
-            byte[] actual;
+            byte[] actual = null;
             target.TransactionID = Transaction;
-            actual = target.ReadCoils(Unit, StartAddress, Quantity);
+            try
+            {
+                actual = target.ReadCoils(Unit, StartAddress, Quantity);
+            }
+            catch (ModbusException ex)
+            {
+                throw ex;
+            }
             Assert.AreEqual(expected, actual);
         }
 

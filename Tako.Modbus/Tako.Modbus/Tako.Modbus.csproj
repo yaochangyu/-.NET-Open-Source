@@ -51,7 +51,6 @@
     <Compile Include="src\Enum\EnumModbusIntegralUnit.cs" />
     <Compile Include="src\Enum\EnumFunctionCode.cs" />
     <Compile Include="src\Enum\EnumModbusFraming.cs" />
-    <Compile Include="src\Exception\ModbusExceptionMessage.cs" />
     <Compile Include="src\Exception\ModbusException.cs" />
     <Compile Include="src\ModbusUtility.cs" />
   </ItemGroup>

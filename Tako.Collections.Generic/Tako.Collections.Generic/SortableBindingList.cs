@@ -9,7 +9,8 @@ namespace Tako.Collections.Generic
 {
     public class SortableBindingList<T> : BindingList<T>
     {
-        private readonly Dictionary<Type, PropertyComparer<T>> _comparerList = new Dictionary<Type, PropertyComparer<T>>();
+        private readonly Dictionary<string, PropertyComparer<T>> _comparerList = new Dictionary<string, PropertyComparer<T>>();
+
         private ListSortDirection _sortDirection;
         private PropertyDescriptor _property;
 
@@ -52,16 +53,16 @@ namespace Tako.Collections.Generic
         {
             List<T> list = (List<T>)this.Items;
 
-            Type propertyType = property.PropertyType;
+            var name = property.Name;
             PropertyComparer<T> comparer;
 
-            if (!this._comparerList.TryGetValue(propertyType, out comparer))
+            if (!this._comparerList.TryGetValue(name, out comparer))
             {
                 comparer = new PropertyComparer<T>(property, direction);
-                this._comparerList.Add(propertyType, comparer);
+                this._comparerList.Add(name, comparer);
             }
 
-            comparer.SetPropertyAndSortDirection(property, direction);
+            comparer.SortDirection = direction;
             list.Sort(comparer);
 
             this._property = property;

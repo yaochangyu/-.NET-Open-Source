@@ -49,25 +49,45 @@ namespace Tako.Collections.Generic
             get { return this._sortDirection; }
         }
 
+        //protected override void ApplySortCore(PropertyDescriptor property, ListSortDirection sortDirection)
+        //{
+        //    List<T> list = (List<T>)this.Items;
+        //    var name = property.Name;
+        //    PropertyComparer<T> comparer;
+
+        //    if (!this._comparerList.TryGetValue(name, out comparer))
+        //    {
+        //        comparer = new PropertyComparer<T>(property, sortDirection);
+        //        this._comparerList.Add(name, comparer);
+        //    }
+
+        //    comparer.SetDirection(sortDirection);
+        //    list.Sort(comparer);
+
+        //    this._property = property;
+        //    this._sortDirection = sortDirection;
+        //    this.OnListChanged(new ListChangedEventArgs(ListChangedType.Reset, -1));
+        //}
+
         protected override void ApplySortCore(PropertyDescriptor property, ListSortDirection direction)
         {
-            List<T> list = (List<T>)this.Items;
-
-            var name = property.Name;
-            PropertyComparer<T> comparer;
-
-            if (!this._comparerList.TryGetValue(name, out comparer))
+            List<T> itemsList = (List<T>)this.Items;
+            if (property.PropertyType.GetInterface("IComparable") != null)
             {
-                comparer = new PropertyComparer<T>(property, direction);
-                this._comparerList.Add(name, comparer);
+                itemsList.Sort((x, y) =>
+                {
+                    if (property.GetValue(x) != null)
+                        return ((IComparable)property.GetValue(x)).CompareTo(property.GetValue(y)) *
+                               (direction == ListSortDirection.Descending ? -1 : 1);
+                    else if (property.GetValue(y) != null)
+                        return ((IComparable)property.GetValue(y)).CompareTo(property.GetValue(x)) *
+                               (direction == ListSortDirection.Descending ? 1 : -1);
+                    else
+                        return 0;
+                });
             }
-
-            comparer.SortDirection = direction;
-            list.Sort(comparer);
-
             this._property = property;
             this._sortDirection = direction;
-            this.OnListChanged(new ListChangedEventArgs(ListChangedType.Reset, -1));
         }
     }
 }

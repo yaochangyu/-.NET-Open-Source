@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <IP>2001::25de::cade</IP>
+  <IP>255.255.255.256.0</IP>
+  <IP>01234a5</IP>
+  <IP>abcdef</IP>
+  <IP>""</IP>
+  <IP></IP>
+</Items>

@@ -21,7 +21,7 @@ namespace Tako.Serialization
     /// <summary>
     /// Class SerializationExtension.
     /// </summary>
-    public static class SerializationExtension
+    public static partial class SerializationExtension
     {
         /// <summary>
         /// The s_ binary serializer

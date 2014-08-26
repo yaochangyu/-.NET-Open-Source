@@ -36,6 +36,12 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\Tako.Component.Extension.XML</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>yao-chang.yu%40outlook.com.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -55,6 +61,9 @@
     <Compile Include="src\String\Split.cs" />
     <Compile Include="src\String\Other.cs" />
     <Compile Include="src\String\Mask.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="yao-chang.yu%40outlook.com.pfx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

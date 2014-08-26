@@ -1,13 +1,13 @@
 ﻿// ***********************************************************************
 // Assembly         : Tako.Component.Extension
-// Author           : S01YAO
+// Author           : 余小章
 // Created          : 08-26-2014
 //
-// Last Modified By : S01YAO
+// Last Modified By : 余小章
 // Last Modified On : 08-26-2014
 // ***********************************************************************
 // <copyright file="PropertyComparer.cs" company="">
-//     Copyright (c) . All rights reserved.
+//     Copyright (c) . 余小章 . All rights reserved.
 // </copyright>
 // <summary></summary>
 // ***********************************************************************

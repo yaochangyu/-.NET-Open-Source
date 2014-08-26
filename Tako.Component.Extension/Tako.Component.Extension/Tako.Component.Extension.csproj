@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Tako.Component.Extension.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,23 +34,27 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Tako.Component.Extension.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dynmic\GenericTransparentDynamicObject.cs" />
-    <Compile Include="Dynmic\StaticClassTransparentDynamicObject.cs" />
-    <Compile Include="Dynmic\Transparent.cs" />
-    <Compile Include="Dynmic\TransparentDynamicObjectExtensions.cs" />
-    <Compile Include="Object\GenericObjectExtensions.cs" />
+    <Compile Include="src\Dynmic\GenericTransparentDynamicObject.cs" />
+    <Compile Include="src\Dynmic\StaticClassTransparentDynamicObject.cs" />
+    <Compile Include="src\Dynmic\Transparent.cs" />
+    <Compile Include="src\Dynmic\TransparentDynamicObjectExtensions.cs" />
+    <Compile Include="src\SortableBindingList\BindingListExtension.cs" />
+    <Compile Include="src\SortableBindingList\SortableBindingList.cs" />
+    <Compile Include="src\SortableBindingList\PropertyComparer.cs" />
+    <Compile Include="src\Object\GenericObjectExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="String\Valid.cs" />
-    <Compile Include="String\SaveAndLoad.cs" />
-    <Compile Include="String\Split.cs" />
-    <Compile Include="String\Other.cs" />
-    <Compile Include="String\Mask.cs" />
+    <Compile Include="src\String\Valid.cs" />
+    <Compile Include="src\String\SaveAndLoad.cs" />
+    <Compile Include="src\String\Split.cs" />
+    <Compile Include="src\String\Other.cs" />
+    <Compile Include="src\String\Mask.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

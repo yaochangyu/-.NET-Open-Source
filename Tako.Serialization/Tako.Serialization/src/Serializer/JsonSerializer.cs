@@ -34,10 +34,6 @@ namespace Tako.Serialization
         /// <exception cref="System.ArgumentNullException">obj</exception>
         public override byte[] Serialize<T>(T source)
         {
-            if (ReferenceEquals(source, null))
-            {
-                throw new ArgumentNullException("source");
-            }
             var json = JsonConvert.SerializeObject(source);
             return this.Encode.GetBytes(json);
         }
@@ -51,10 +47,6 @@ namespace Tako.Serialization
         /// <exception cref="System.ArgumentNullException">inputArray</exception>
         public override T Deserialize<T>(byte[] inputArray)
         {
-            if (inputArray == null)
-            {
-                throw new ArgumentNullException("inputArray");
-            }
             var json = this.Encode.GetString(inputArray);
             return JsonConvert.DeserializeObject<T>(json);
         }

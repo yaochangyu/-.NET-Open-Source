@@ -4,7 +4,7 @@
 // Created          : 01-23-2014
 //
 // Last Modified By : 余小章
-// Last Modified On : 08-26-2014
+// Last Modified On : 08-28-2014
 // ***********************************************************************
 // <copyright file="XmlSerializer.cs" company="">
 //     Copyright (c) .余小章. All rights reserved.
@@ -36,18 +36,13 @@ namespace Tako.Serialization
         /// Serializes the specified object.
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="obj">The object.</param>
+        /// <param name="source">The object.</param>
         /// <returns>System.Byte[].</returns>
         /// <exception cref="System.ArgumentNullException">obj</exception>
-        public override byte[] Serialize<T>(T obj)
+        public override byte[] Serialize<T>(T source)
         {
-            if (obj == null)
-            {
-                throw new ArgumentNullException("obj");
-            }
-
             var memory = new MemoryStream();
-            this.createXmlSerializer<T>().Serialize(memory, obj);
+            this.createXmlSerializer<T>().Serialize(memory, source);
             memory.Position = 0;
             return memory.ToArray();
         }
@@ -56,17 +51,12 @@ namespace Tako.Serialization
         /// Deserializes the specified sources.
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="sources">The sources.</param>
+        /// <param name="inputArray">The sources.</param>
         /// <returns>T.</returns>
         /// <exception cref="System.ArgumentNullException">obj</exception>
-        public override T Deserialize<T>(byte[] sources)
+        public override T Deserialize<T>(byte[] inputArray)
         {
-            if (sources == null)
-            {
-                throw new ArgumentNullException("sources");
-            }
-
-            using (MemoryStream memory = new MemoryStream(sources))
+            using (MemoryStream memory = new MemoryStream(inputArray))
             {
                 object obj = this.createXmlSerializer<T>().Deserialize(memory);
                 return (T)obj;

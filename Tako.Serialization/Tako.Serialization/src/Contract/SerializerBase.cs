@@ -62,15 +62,6 @@ namespace Tako.Serialization
         /// outputStream</exception>
         public virtual byte[] Serialize<T>(T source, Stream outputStream)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException("source");
-            }
-
-            if (outputStream == null)
-            {
-                throw new ArgumentNullException("outputStream");
-            }
             var serializeArray = this.Serialize(source);
             outputStream.Write(serializeArray, 0, serializeArray.Length);
             outputStream.Dispose();
@@ -89,15 +80,6 @@ namespace Tako.Serialization
         /// outputFilePath</exception>
         public virtual byte[] Serialize<T>(T source, string outputFilePath)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException("source");
-            }
-            if (string.IsNullOrWhiteSpace(outputFilePath))
-            {
-                throw new ArgumentNullException("outputFilePath");
-            }
-
             using (var outputStream = new FileStream(outputFilePath, FileMode.Create, FileAccess.Write))
             {
                 return this.Serialize(source, outputStream);
@@ -119,13 +101,8 @@ namespace Tako.Serialization
         /// <param name="inputStream">The stream.</param>
         /// <returns>T.</returns>
         /// <exception cref="System.ArgumentNullException">inputStream</exception>
-        public T Deserialize<T>(Stream inputStream)
+        public virtual T Deserialize<T>(Stream inputStream)
         {
-            if (ReferenceEquals(inputStream, null))
-            {
-                throw new ArgumentNullException("inputStream");
-            }
-
             using (var memory = new MemoryStream())
             {
                 inputStream.CopyTo(memory);
@@ -142,10 +119,6 @@ namespace Tako.Serialization
         /// <exception cref="System.ArgumentNullException">inputFileName</exception>
         public virtual T Deserialize<T>(string inputFileName)
         {
-            if (string.IsNullOrWhiteSpace(inputFileName))
-            {
-                throw new ArgumentNullException("inputFileName");
-            }
             using (var inputStream = new FileStream(inputFileName, FileMode.Open, FileAccess.Read))
             {
                 return this.Deserialize<T>(inputStream);
@@ -158,7 +131,7 @@ namespace Tako.Serialization
         /// <typeparam name="T"></typeparam>
         /// <param name="obj">The object.</param>
         /// <returns>A <see cref="System.String" /> that represents this instance.</returns>
-        public string ToString<T>(T obj)
+        public virtual string ToString<T>(T obj)
         {
             return this.Encode.GetString(this.Serialize(obj));
         }

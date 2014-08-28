@@ -40,10 +40,6 @@ namespace Tako.Serialization
         /// <exception cref="System.ArgumentNullException">source</exception>
         public override byte[] Serialize<T>(T source)
         {
-            if (ReferenceEquals(source, null))
-            {
-                throw new ArgumentNullException("source");
-            }
             using (var memory = new MemoryStream())
             {
                 this.cretaeBinaryFormatter<T>().Serialize(memory, source);
@@ -60,10 +56,6 @@ namespace Tako.Serialization
         /// <exception cref="System.ArgumentNullException">stream</exception>
         public override T Deserialize<T>(byte[] inputArray)
         {
-            if (ReferenceEquals(inputArray, null))
-            {
-                throw new ArgumentNullException("stream");
-            }
             var memory = new MemoryStream(inputArray);
             object obj = this.cretaeBinaryFormatter<T>().Deserialize(memory);
             if (obj == null)

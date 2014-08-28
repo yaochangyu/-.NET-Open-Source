@@ -24,7 +24,7 @@ namespace Tako.Serialization.UnitTest
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(System.ArgumentException))]
         public void 序列化物件到檔案例外測試1()
         {
             User user = null;
@@ -33,7 +33,7 @@ namespace Tako.Serialization.UnitTest
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(System.ArgumentException))]
         public void 序列化物件到檔案例外測試2()
         {
             User user = new User();
@@ -52,7 +52,7 @@ namespace Tako.Serialization.UnitTest
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(System.NullReferenceException))]
         public void 序列化物件到檔案例外測試4()
         {
             User user = new User();
@@ -62,7 +62,7 @@ namespace Tako.Serialization.UnitTest
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(System.ArgumentException))]
         public void 反序列化檔案到物件例外測試1()
         {
             BinarySerializer serializer = new BinarySerializer();
@@ -70,7 +70,7 @@ namespace Tako.Serialization.UnitTest
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(System.NullReferenceException))]
         public void 反序列化檔案到物件例外測試2()
         {
             Stream inputStream = null;

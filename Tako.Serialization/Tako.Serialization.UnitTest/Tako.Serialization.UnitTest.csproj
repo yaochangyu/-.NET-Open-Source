@@ -81,7 +81,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Tako.Serialization\Tako.Serialization.csproj">
       <Project>{073b0c77-73df-417c-9522-0208bbae1468}</Project>
-      <Name>THS.Serialization</Name>
+      <Name>Tako.Serialization</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

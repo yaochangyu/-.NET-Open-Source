@@ -1,10 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
-using System.Linq;
-using System.Text;
 using Tako.Component.Extension;
 
 namespace TestProject1
@@ -343,7 +339,7 @@ namespace TestProject1
                 }
             };
 
-            Person actual = expected.DeepClone();
+            Person actual = expected.Clone();
             actual.Phones[0].Phone = "";
             Assert.AreNotEqual(expected.Phones[0].Phone, actual.Phones[0].Phone);
         }

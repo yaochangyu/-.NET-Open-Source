@@ -11,9 +11,7 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-using System;
 using System.IO;
-using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
 /// <summary>
@@ -32,7 +30,7 @@ namespace Tako.Component.Extension
         /// <typeparam name="T"></typeparam>
         /// <param name="source">The source.</param>
         /// <returns>T.</returns>
-        public static T DeepClone<T>(this T source) where T : new()
+        public static T Clone<T>(this T source) where T : new()
         {
             if (source != null)
             {
@@ -49,6 +47,15 @@ namespace Tako.Component.Extension
             {
                 return default(T);
             }
+        }
+
+        private static Migration s_migration = new Migration();
+
+        public static U Migrate<T, U>(this T source, U target)
+            where T : new()
+            where U : new()
+        {
+            return s_migration.Migrate(source, target);
         }
     }
 }

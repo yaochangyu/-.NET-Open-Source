@@ -58,10 +58,15 @@
   <ItemGroup>
     <Compile Include="Dynmic\AsTransparentDynamicExceptionTest.cs" />
     <Compile Include="Dynmic\AsTransparentDynamicTest.cs" />
+    <Compile Include="Object\GenericObjectExtensionsUnitTest.cs" />
     <Compile Include="String\StringExtensions.cs" />
+    <Compile Include="TestSource\Account.cs" />
+    <Compile Include="TestSource\AccountLog.cs" />
     <Compile Include="TestSource\Foo.cs" />
+    <Compile Include="TestSource\IAccount.cs" />
     <Compile Include="TestSource\Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Tako.Component.Extension\Tako.Component.Extension.csproj">

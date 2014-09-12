@@ -61,6 +61,7 @@
     <Compile Include="Object\GenericObjectExtensionsUnitTest.cs" />
     <Compile Include="String\StringExtensions.cs" />
     <Compile Include="TestSource\Account.cs" />
+    <Compile Include="TestSource\AccountBase.cs" />
     <Compile Include="TestSource\AccountLog.cs" />
     <Compile Include="TestSource\Foo.cs" />
     <Compile Include="TestSource\IAccount.cs" />

@@ -4,7 +4,7 @@
 // Created          : 08-14-2014
 //
 // Last Modified By : 余小章
-// Last Modified On : 08-14-2014
+// Last Modified On : 08-26-2014
 // ***********************************************************************
 // <copyright file="StaticClassTransparentDynamicObject.cs" company="">
 //     Copyright (c) . 余小章 . All rights reserved.

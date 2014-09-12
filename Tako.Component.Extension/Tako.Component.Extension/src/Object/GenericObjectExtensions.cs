@@ -1,16 +1,18 @@
 ﻿// ***********************************************************************
 // Assembly         : Tako.Component.Extension
 // Author           : 余小章
-// Created          : 08-19-2014
+// Created          : 08-26-2014
 //
 // Last Modified By : 余小章
-// Last Modified On : 08-26-2014
+// Last Modified On : 09-12-2014
 // ***********************************************************************
-// <copyright file="GenericObjectExtensions.cs" company="">
-//     Copyright (c) . 余小章 . All rights reserved.
+// <copyright file="GenericObjectExtensions.cs" company="余小章">
+//     Copyright (c) 余小章. All rights reserved.
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+
+using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -49,13 +51,25 @@ namespace Tako.Component.Extension
             }
         }
 
+        /// <summary>
+        /// The s_migration
+        /// </summary>
         private static Migration s_migration = new Migration();
 
-        public static U Migrate<T, U>(this T source, U target)
-            where T : new()
-            where U : new()
+        /// <summary>
+        /// Migrates the specified source.
+        /// </summary>
+        /// <typeparam name="TSource">The type of the t source.</typeparam>
+        /// <typeparam name="UTarget">The type of the u target.</typeparam>
+        /// <param name="type">The type.</param>
+        /// <param name="source">The source.</param>
+        /// <param name="target">The target.</param>
+        /// <returns>U.</returns>
+        public static UTarget Migrate<TSource, UTarget>(this Type type, TSource source, UTarget target)
+            where TSource : new()
+            where UTarget : new()
         {
-            return s_migration.Migrate(source, target);
+            return s_migration.Migrate(type, source, target);
         }
     }
 }

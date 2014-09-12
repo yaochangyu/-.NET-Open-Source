@@ -4,9 +4,9 @@
 // Created          : 08-19-2014
 //
 // Last Modified By : 余小章
-// Last Modified On : 08-19-2014
+// Last Modified On : 08-26-2014
 // ***********************************************************************
-// <copyright file="Valid.cs" company="">
+// <copyright file="Valid.cs" company="余小章">
 //     Copyright (c) . 余小章 . All rights reserved.
 // </copyright>
 // <summary></summary>
@@ -29,7 +29,7 @@ namespace Tako.Component.Extension
         /// <summary>
         /// 判斷字串內所有字元是否為數字
         /// </summary>
-        /// <param name="Value">擴充字串</param>
+        /// <param name="source">The source.</param>
         /// <returns>返回判斷結果</returns>
         /// 判斷字串內所有字元是否為數字
         public static bool IsAllNumber(this string source)

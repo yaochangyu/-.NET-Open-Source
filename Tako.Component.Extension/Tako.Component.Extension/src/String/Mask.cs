@@ -4,9 +4,9 @@
 // Created          : 08-19-2014
 //
 // Last Modified By : 余小章
-// Last Modified On : 08-19-2014
+// Last Modified On : 08-26-2014
 // ***********************************************************************
-// <copyright file="Mask.cs" company="">
+// <copyright file="Mask.cs" company="余小章">
 //     Copyright (c) . 余小章 . All rights reserved.
 // </copyright>
 // <summary></summary>

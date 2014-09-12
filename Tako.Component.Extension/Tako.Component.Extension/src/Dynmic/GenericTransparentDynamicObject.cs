@@ -4,9 +4,9 @@
 // Created          : 08-14-2014
 //
 // Last Modified By : 余小章
-// Last Modified On : 08-14-2014
+// Last Modified On : 08-26-2014
 // ***********************************************************************
-// <copyright file="GenericTransparentDynamicObject.cs" company="">
+// <copyright file="GenericTransparentDynamicObject.cs" company="余小章">
 //     Copyright (c) . 余小章 . All rights reserved.
 // </copyright>
 // <summary></summary>

@@ -4,9 +4,9 @@
 // Created          : 08-26-2014
 //
 // Last Modified By : 余小章
-// Last Modified On : 08-26-2014
+// Last Modified On : 09-04-2014
 // ***********************************************************************
-// <copyright file="SortableBindingList.cs" company="">
+// <copyright file="SortableBindingList.cs" company="余小章">
 //     Copyright (c) . 余小章 . All rights reserved.
 // </copyright>
 // <summary></summary>
@@ -42,7 +42,7 @@ namespace Tako.Component.Extension
         private PropertyDescriptor _property;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SortableBindingList{T}"/> class.
+        /// Initializes a new instance of the <see cref="SortableBindingList{T}" /> class.
         /// </summary>
         public SortableBindingList()
             : base(new List<T>())
@@ -50,7 +50,7 @@ namespace Tako.Component.Extension
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SortableBindingList{T}"/> class.
+        /// Initializes a new instance of the <see cref="SortableBindingList{T}" /> class.
         /// </summary>
         /// <param name="List">The list.</param>
         public SortableBindingList(IList<T> List)
@@ -59,7 +59,7 @@ namespace Tako.Component.Extension
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SortableBindingList{T}"/> class.
+        /// Initializes a new instance of the <see cref="SortableBindingList{T}" /> class.
         /// </summary>
         /// <param name="Enumerable">The enumerable.</param>
         public SortableBindingList(IEnumerable<T> Enumerable)

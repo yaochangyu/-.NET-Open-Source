@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using Tako.Component.Extension.UnitTest.TestSource;
 
 namespace Tako.Component.Extension.UnitTest.Object

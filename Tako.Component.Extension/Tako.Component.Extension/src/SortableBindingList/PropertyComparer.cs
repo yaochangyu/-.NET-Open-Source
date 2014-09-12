@@ -4,9 +4,9 @@
 // Created          : 08-26-2014
 //
 // Last Modified By : 余小章
-// Last Modified On : 08-26-2014
+// Last Modified On : 09-04-2014
 // ***********************************************************************
-// <copyright file="PropertyComparer.cs" company="">
+// <copyright file="PropertyComparer.cs" company="余小章">
 //     Copyright (c) . 余小章 . All rights reserved.
 // </copyright>
 // <summary></summary>
@@ -42,7 +42,7 @@ namespace Tako.Component.Extension
         private ListSortDirection _sortDirection;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PropertyComparer{T}"/> class.
+        /// Initializes a new instance of the <see cref="PropertyComparer{T}" /> class.
         /// </summary>
         /// <param name="property">The property.</param>
         /// <param name="sortDirection">The sort direction.</param>

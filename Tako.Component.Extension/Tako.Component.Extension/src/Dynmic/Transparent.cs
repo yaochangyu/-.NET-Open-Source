@@ -4,9 +4,9 @@
 // Created          : 08-14-2014
 //
 // Last Modified By : 余小章
-// Last Modified On : 08-14-2014
+// Last Modified On : 08-26-2014
 // ***********************************************************************
-// <copyright file="Transparent.cs" company="">
+// <copyright file="Transparent.cs" company="余小章">
 //     Copyright (c) . 余小章 . All rights reserved.
 // </copyright>
 // <summary></summary>
@@ -40,7 +40,7 @@ namespace Tako.Component.Extension
         private const string CLASS_NAME = "Microsoft.CSharp.RuntimeBinder.CSharpInvokeMemberBinder";
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Transparent"/> class.
+        /// Initializes a new instance of the <see cref="Transparent" /> class.
         /// </summary>
         public Transparent()
         {
